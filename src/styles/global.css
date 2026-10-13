@@ -101,7 +101,8 @@ header.site .wrap{display:flex;justify-content:center}
 .nav-links a.active{color:var(--accent)}
 .nav-cta{flex:none}
 .dropdown>a::after{content:" ▾";font-size:11px;color:var(--faint)}
-.dropdown .menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:var(--surface);border-radius:16px;box-shadow:var(--nav-shadow);padding:10px;min-width:220px;display:none;list-style:none}
+.dropdown .menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:var(--surface);border-radius:16px;box-shadow:var(--nav-shadow);padding:10px;min-width:240px;display:none;list-style:none}
+.dropdown .menu::before{content:'';position:absolute;top:-16px;left:-20px;right:-20px;height:16px}
 .dropdown:hover .menu,.dropdown:focus-within .menu{display:block}
 .dropdown .menu a{display:block;padding:9px 14px;border-radius:10px;font-size:15px}
 .dropdown .menu a:hover{background:var(--mist);color:var(--ink)}
