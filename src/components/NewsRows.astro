@@ -2,17 +2,13 @@
 import posts from '../data/posts.json';
 interface Props { limit?: number }
 const { limit } = Astro.props;
-const SAMPLE = 'trong-cay-xanh-chua-lanh-tam-hon';
 let rows = posts.filter((p: any) => JSON.stringify(p.cat) === '[1]' && p.slug !== 'ken-space-alliance');
 if (limit) rows = rows.slice(0, limit);
 const trim = (s: string) => (s.length > 150 ? s.slice(0, 150).split(' ').slice(0, -1).join(' ') + '…' : s);
 ---
 <div class="rows">
   {rows.map((p: any) => (
-    <a class="row-item"
-       href={p.slug === SAMPLE ? '/bai-viet' : `https://spms2.com/${p.slug}/`}
-       target={p.slug === SAMPLE ? undefined : '_blank'}
-       rel={p.slug === SAMPLE ? undefined : 'noopener'}>
+    <a class="row-item" href={`/tin-tuc/${p.slug}`}>
       <div class="meta">Tin tức<small>{p.date}</small></div>
       <div><h3 set:html={p.title} /><p>{trim(p.excerpt)}</p></div>
       <div class="go">Đọc →</div>

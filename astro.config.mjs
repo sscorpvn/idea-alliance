@@ -9,4 +9,5 @@ const base = raw ? '/' + raw : '/';
 export default defineConfig({
   site: process.env.DEPLOY_SITE || 'https://hieudamsau.github.io',
   base,
+  redirects: { '/bai-viet': '/tin-tuc/trong-cay-xanh-chua-lanh-tam-hon' },
 });

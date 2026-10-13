@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import archive from '../../data/posts-archive.json';
+
+export function getStaticPaths() {
+  return archive
+    .filter((p: any) => p.cats.includes(1) && p.slug !== 'ken-space-alliance')
+    .map((p: any) => ({ params: { slug: p.slug }, props: { post: p } }));
+}
+
+const { post } = Astro.props;
+
+// Làm sạch nội dung WordPress: bỏ ảnh/figure (nguồn cũ sẽ không còn),
+// chuẩn hoá heading, đổi thương hiệu, link ngoài mở tab mới.
+let html = post.content as string;
+html = html.replace(/Kén Space Alliance/g, 'IDEA').replace(/Kén Space/g, 'IDEA').replace(/Kén/g, 'IDEA');
+html = html.replace(/<figure[\s\S]*?<\/figure>/g, '').replace(/<img[^>]*>/g, '');
+html = html.replace(/<h[1-6][^>]*>/g, '<h2>').replace(/<\/h[1-6]>/g, '</h2>');
+html = html.replace(/<(?!\/?(p|h2|a|strong|em|b|i|u|ul|ol|li|blockquote|br)\b)[^>]+>/g, '');
+html = html.replace(/<a\s([^>]*?)>/g, (_m: string, attrs: string) =>
+  `<a ${attrs.replace(/target="[^"]*"|rel="[^"]*"/g, '').trim()} target="_blank" rel="noopener">`);
+html = html.replace(/<p>\s*<\/p>/g, '');
+// link nội bộ cũ spms2.com/<slug>/ → đường dẫn mới
+html = html.replace(/https?:\/\/spms2\.com\/([a-z0-9-]+)\/?/g, '/tin-tuc/$1');
+
+const title = (post.title as string).replace(/&#8211;/g, '–').replace(/&#038;/g, '&').replace(/&amp;/g, '&');
+const d = (post.date as string).slice(0, 10).split('-');
+---
+<Base title={`${title} — IDEA`} active="news">
+  <section class="page-head" style="padding-bottom:30px">
+    <div class="wrap article-head">
+      <span class="eyebrow">Tin tức</span>
+      <h1 class="display" style="font-size:clamp(28px,3.6vw,48px)" set:html={title} />
+      <div class="article-meta">{d[2]} · {d[1]} · {d[0]} — <b>IDEA</b></div>
+    </div>
+  </section>
+  <section class="band white" style="padding-top:64px">
+    <div class="wrap">
+      <div class="article article-body" set:html={html} />
+      <div class="article" style="margin-top:48px">
+        <a class="arrow" href="/tin-tuc">Tất cả bài viết</a>
+      </div>
+    </div>
+  </section>
+</Base>
