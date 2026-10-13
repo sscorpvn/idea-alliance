@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+import PillarCards from '../components/PillarCards.astro';
+const cultures = [
+  ['Tin tưởng', 'Minh bạch trong hợp tác, giữ chữ tín với thành viên, khách hàng và đối tác.'],
+  ['Trách nhiệm cao', 'Chủ động nhận việc, theo đến cùng và chịu trách nhiệm với kết quả.'],
+  ['Chuyên môn & cải tiến', 'Không ngừng học hỏi, nâng chuẩn chất lượng trong từng sản phẩm dịch vụ.'],
+  ['Đạo đức', 'Kinh doanh tử tế, đặt giá trị nhân văn của gia đình và cộng đồng làm gốc.'],
+];
+---
+<Base title="Về chúng tôi — IDEA" active="about">
+  <section class="page-head">
+    <div class="wrap cols split-57">
+      <div>
+        <span class="eyebrow">Welcome to IDEA</span>
+        <h1 class="display">Hệ tư tưởng tiên phong về kinh doanh tạo tác động xã hội</h1>
+        <p class="lede">IDEA là liên minh tiên phong ứng dụng kinh doanh tạo tác động xã hội, khởi nghiệp, kết nối và tái cấu trúc doanh nghiệp bằng công nghệ tại Việt Nam.</p>
+      </div>
+      <div class="img-r16"><img src="/assets/about1.webp" alt="IDEA" /></div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap grid-2">
+      <div class="card" style="padding:40px">
+        <span class="eyebrow">Tầm nhìn</span>
+        <h2 class="title-serif" style="font-size:26px">Nền kinh tế chia sẻ của những doanh nhân tử tế</h2>
+        <p style="margin-top:14px">Xây dựng nền kinh tế chia sẻ cùng các doanh nhân đề cao đạo đức kinh doanh, hướng tới phục hồi những giá trị văn hoá tốt đẹp của gia đình và cộng đồng.</p>
+      </div>
+      <div class="card" style="padding:40px">
+        <span class="eyebrow">Sứ mệnh</span>
+        <h2 class="title-serif" style="font-size:26px">Phát triển con người, đối tác và cộng đồng</h2>
+        <p style="margin-top:14px">Cam kết phát triển con người, đối tác và cộng đồng thông qua quản trị nguồn lực hiệu quả — cùng nhau tạo ra và chia sẻ giá trị bền vững.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head center">
+        <span class="eyebrow">Hệ quản trị nguồn lực</span>
+        <h2 class="display-sm">Sơ đồ Hệ quản trị nguồn lực xã hội</h2>
+        <p class="lede measure auto" style="margin-top:18px">Giải pháp tổng thể của IDEA cho cá nhân, nhóm, tổ chức và doanh nghiệp — từ quản trị vận hành đến phát triển nguồn lực.</p>
+      </div>
+      <img class="r16" src="/assets/sodo.webp" alt="Sơ đồ hệ quản trị nguồn lực xã hội" loading="lazy" />
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head center">
+        <span class="eyebrow">Giá trị cốt lõi</span>
+        <h2 class="display-sm">Ba trọng tâm hành động</h2>
+      </div>
+      <PillarCards short />
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head center">
+        <span class="eyebrow">Văn hoá liên minh</span>
+        <h2 class="display-sm">Cách chúng tôi làm việc cùng nhau</h2>
+      </div>
+      <div class="grid-4">
+        {cultures.map(([t, d], i) => (
+          <div class="card"><div class="num">{String(i + 1).padStart(2, '0')}</div><h3>{t}</h3><p>{d}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="strip">
+        <img src="/assets/home1.webp" alt="" loading="lazy" />
+        <img src="/assets/partner1.webp" alt="" loading="lazy" />
+        <img src="/assets/partner2.webp" alt="" loading="lazy" />
+        <img src="/assets/wide2.webp" alt="" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <CtaBand h="Cùng IDEA kiến tạo giá trị chung" p="Trao đổi trực tiếp với liên minh về hành trình của bạn." />
+</Base>

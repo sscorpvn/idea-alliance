@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+import PillarCards from '../components/PillarCards.astro';
+const services = [
+  ['IT thuê ngoài', 'Đội ngũ công nghệ trọn gói cho doanh nghiệp chưa có phòng IT.'],
+  ['Phòng HRD thuê ngoài', 'Hành chính – nhân sự và tuyển dụng vận hành theo yêu cầu.'],
+  ['Phòng Marketing thuê ngoài', 'Chiến lược, nội dung và quảng cáo với chi phí tối ưu.'],
+  ['Đào tạo & hướng nghiệp', 'Chương trình phát triển kỹ năng cho đội ngũ và cá nhân.'],
+  ['Thiết kế logo & nhận diện', 'Bộ nhận diện thương hiệu đồng bộ, chuyên nghiệp.'],
+  ['Social E-learning', 'Hệ thống đào tạo trực tuyến nội bộ cho tổ chức.'],
+  ['Social E-commerce', 'Giải pháp thương mại điện tử gắn với cộng đồng.'],
+  ['Social SCM', 'Quản trị chuỗi cung ứng trên nền tảng chia sẻ.'],
+  ['Social HRM', 'Quản trị nhân sự số hoá, minh bạch và linh hoạt.'],
+  ['Social ERP', 'Quản trị tổng thể nguồn lực doanh nghiệp.'],
+  ['Social CRM', 'Quản trị quan hệ khách hàng đa kênh.'],
+  ['Social Marketing', 'Tiếp thị dựa trên sức mạnh cộng đồng và mạng xã hội.'],
+  ['Số hoá dữ liệu', 'Chuyển đổi tài liệu, quy trình sang môi trường số.'],
+  ['Bản đồ số', 'Bản đồ số dẫn lối doanh nghiệp tiếp cận thị trường.'],
+];
+const fields = 'Sức khoẻ · Điện tử · Trang sức · Thực phẩm · Đồ uống · Media agency · Hệ thống phần mềm · Luật · Thuế · Tái cấu trúc doanh nghiệp';
+---
+<Base title="Economy — IDEA" active="economy">
+  <section class="page-head">
+    <div class="wrap cols split-57">
+      <div>
+        <span class="eyebrow">IDEA Economy</span>
+        <h1 class="display">Một hệ sinh thái, ba trụ cột, mọi nguồn lực</h1>
+        <p class="lede">Economy của IDEA quy tụ sản phẩm, dịch vụ và nguồn lực của toàn bộ thành viên liên minh — vận hành theo chuẩn chất lượng chung.</p>
+      </div>
+      <div class="img-r16"><img src="/assets/wide2.webp" alt="IDEA Economy" /></div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap"><PillarCards short /></div>
+  </section>
+
+  <section class="band">
+    <div class="wrap cols split-39">
+      <div>
+        <span class="eyebrow">Sản phẩm dịch vụ</span>
+        <h2 class="display-sm" style="font-size:clamp(26px,2.6vw,34px)">Lĩnh vực của thành viên</h2>
+      </div>
+      <p class="lede" style="font-size:19px;line-height:1.8">{fields}</p>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Dịch vụ của liên minh</span>
+        <h2 class="display-sm">14 nhóm giải pháp cho doanh nghiệp</h2>
+      </div>
+      <div class="grid-3">
+        {services.map(([t, d]) => (<div class="card"><h3>{t}</h3><p>{d}</p></div>))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand h="Cần giải pháp cho doanh nghiệp của bạn?" p="IDEA tư vấn miễn phí cho thành viên về lộ trình phù hợp nhất." />
+</Base>

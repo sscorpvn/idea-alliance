@@ -1,0 +1,27 @@
+---
+interface Props { short?: boolean }
+const { short = false } = Astro.props;
+const pillars = [
+  { href: '/idea-growth', img: '/assets/growth.webp', name: 'IDEA GROWTH',
+    long: 'Marketing thuê ngoài, truyền thông thương hiệu và hệ thống bán hàng giúp thành viên tăng trưởng doanh thu.',
+    shortTxt: 'Gia tăng doanh thu.' },
+  { href: '/idea-hrds', img: '/assets/hrd.webp', name: 'IDEA HRDs',
+    long: 'Phòng hành chính – nhân sự và tuyển dụng thuê ngoài, tinh gọn bộ máy vận hành cho doanh nghiệp.',
+    shortTxt: 'Tối ưu chi phí.' },
+  { href: '/idea-tech', img: '/assets/tech.webp', name: 'IDEA TECH',
+    long: 'Social ERP, CRM, E-learning, bản đồ số… — chuyển đổi số toàn diện cho tổ chức của bạn.',
+    shortTxt: 'Phát triển nguồn lực.' },
+];
+---
+<div class="grid-3">
+  {pillars.map(p => (
+    <article class="pillar">
+      <img src={p.img} alt={p.name} loading="lazy" />
+      <div class="pad">
+        <h3 class="title-sans">{p.name}</h3>
+        <p>{short ? p.shortTxt : p.long}</p>
+        <a class="arrow" href={p.href}>Khám phá</a>
+      </div>
+    </article>
+  ))}
+</div>

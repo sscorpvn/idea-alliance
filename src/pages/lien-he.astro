@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Liên hệ — IDEA" active="contact">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Kết nối với IDEA</span>
+      <h1 class="display">Liên hệ IDEA</h1>
+      <p class="lede measure">Để lại thông tin, đội ngũ IDEA sẽ phản hồi trong thời gian sớm nhất.</p>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap cols split-57" style="align-items:start">
+      <div>
+        <div class="card" style="margin-bottom:18px"><span class="eyebrow" style="margin-bottom:8px">Địa chỉ</span>
+          <p style="color:var(--ink)">102T6 – CT18, Việt Hưng, Giang Biên,<br />Long Biên, Hà Nội, Việt Nam</p></div>
+        <div class="card" style="margin-bottom:18px"><span class="eyebrow" style="margin-bottom:8px">Email</span>
+          <p><a class="link" href="mailto:hello@spms2.com">hello@spms2.com</a></p></div>
+        <div class="card"><span class="eyebrow" style="margin-bottom:8px">Điện thoại</span>
+          <p><a class="link" href="tel:02439063333">024 3906 3333</a></p></div>
+      </div>
+      <form class="demo-form">
+        <div class="grid-2">
+          <div class="field"><label for="c-name">Họ tên</label><input id="c-name" type="text" required /></div>
+          <div class="field"><label for="c-phone">Số điện thoại</label><input id="c-phone" type="tel" /></div>
+        </div>
+        <div class="field"><label for="c-mail">Email</label><input id="c-mail" type="email" required /></div>
+        <div class="field"><label for="c-msg">Nội dung</label><textarea id="c-msg" rows="6"></textarea></div>
+        <div><button class="btn btn-lg" type="submit">Gửi liên hệ</button></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="band" id="ctv">
+    <div class="wrap cols split-57" style="align-items:start">
+      <div>
+        <span class="eyebrow">Tuyển dụng</span>
+        <h2 class="display-sm">Trở thành Cộng tác viên</h2>
+        <p class="lede" style="margin-top:18px">Để lại thông tin vào form bên cạnh và IDEA sẽ liên hệ lại với bạn về cơ hội cộng tác phù hợp.</p>
+      </div>
+      <form class="demo-form">
+        <div class="grid-2">
+          <div class="field"><label for="v-name">Họ tên</label><input id="v-name" type="text" required /></div>
+          <div class="field"><label for="v-phone">Số điện thoại</label><input id="v-phone" type="tel" /></div>
+        </div>
+        <div class="field"><label for="v-mail">Email</label><input id="v-mail" type="email" required /></div>
+        <div class="field"><label for="v-field">Lĩnh vực, sản phẩm dịch vụ muốn cộng tác</label><textarea id="v-field" rows="4"></textarea></div>
+        <div><button class="btn btn-lg" type="submit">Gửi thông tin</button></div>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.demo-form').forEach(f => f.addEventListener('submit', e => {
+      e.preventDefault();
+      (f as HTMLFormElement).reset();
+      alert('Bản demo — form sẽ được nối hệ thống gửi mail sau.');
+    }));
+  </script>
+</Base>

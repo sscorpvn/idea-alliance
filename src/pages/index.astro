@@ -1,0 +1,101 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+import PillarCards from '../components/PillarCards.astro';
+import NewsRows from '../components/NewsRows.astro';
+import quotes from '../data/testimonials.json';
+---
+<Base title="IDEA — Liên minh Kinh tế số & ĐMST" active="home">
+  <section class="hero">
+    <div class="wrap cols">
+      <div>
+        <span class="eyebrow">Liên minh Kinh tế số &amp; Đổi mới sáng tạo</span>
+        <h1 class="display">Nơi kiến tạo không gian sống và làm việc</h1>
+        <p class="lede">Liên minh IDEA đồng hành cùng cá nhân, nhóm, tổ chức và doanh nghiệp phát triển từ hạt mầm đến trưởng thành — trên nền tảng quản trị nguồn lực xã hội.</p>
+        <div class="actions">
+          <a class="btn btn-lg" href="/thanh-vien">Tham gia liên minh</a>
+          <a class="arrow" href="/economy">Khám phá IDEA Economy</a>
+        </div>
+      </div>
+      <div class="hero-img"><img src="/assets/hero.webp" alt="Không gian IDEA" /></div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Giá trị dành cho thành viên</span>
+        <h2 class="display-sm">IDEA mang lại gì cho bạn?</h2>
+      </div>
+      <div class="grid-4">
+        <div class="card"><div class="num">01</div>
+          <h3>Gia tăng doanh thu</h3>
+          <p>Thiết lập hệ sinh thái truyền thông, bán hàng và hỗ trợ thành viên kết nối khách hàng, đối tác theo chuẩn chất lượng chung.</p>
+          <a class="arrow" href="/idea-growth">IDEA GROWTH</a></div>
+        <div class="card"><div class="num">02</div>
+          <h3>Tối ưu chi phí</h3>
+          <p>Hệ quản trị nhân sự – hành chính cho phép thành viên uỷ thác vận hành văn phòng, tập trung vào năng lực cốt lõi.</p>
+          <a class="arrow" href="/idea-hrds">IDEA HRDs</a></div>
+        <div class="card"><div class="num">03</div>
+          <h3>Phát triển nguồn lực</h3>
+          <p>Tư vấn và kiến trúc doanh nghiệp theo triết lý quản trị nguồn lực bền vững của IDEA.</p>
+          <a class="arrow" href="/idea-tech">IDEA TECH</a></div>
+        <div class="card"><div class="num">04</div>
+          <h3>Nguồn lực xã hội</h3>
+          <p>Sở hữu chung — cùng đóng góp, cùng thụ hưởng giá trị cộng đồng mà liên minh tạo ra.</p>
+          <a class="arrow" href="/ve-chung-toi">Triết lý IDEA</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap cols split-75">
+      <div>
+        <span class="eyebrow">Phục hồi văn hoá</span>
+        <h2 class="display-sm">Cùng nhau xây dựng văn hoá sống và làm việc</h2>
+        <p class="lede" style="margin-top:20px">Thành viên IDEA cùng vun đắp giá trị nhân văn của gia đình và cộng đồng, thắt chặt sợi dây liên kết bản địa — nền móng cho một nền kinh tế chia sẻ tử tế và bền vững.</p>
+        <p style="margin-top:16px"><a class="arrow" href="/ve-chung-toi">Văn hoá liên minh</a></p>
+      </div>
+      <div class="img-r16"><img src="/assets/wide1.webp" alt="Hoạt động cộng đồng IDEA" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head center">
+        <span class="eyebrow">IDEA Economy</span>
+        <h2 class="display-sm">Ba trụ cột của hệ sinh thái</h2>
+      </div>
+      <PillarCards />
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head center">
+        <span class="eyebrow">Chuyên gia nói về IDEA</span>
+        <h2 class="display-sm">Được tin tưởng bởi những người đồng hành</h2>
+      </div>
+      <div class="grid-3">
+        {quotes.map((q: any) => (
+          <div class="quote">
+            <blockquote>“{q.q}”</blockquote>
+            <div class="who"><b>{q.n}</b>{q.t}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap">
+        <h2 class="display-sm">Tin tức mới</h2>
+        <a class="arrow" href="/tin-tuc">Tất cả bài viết</a>
+      </div>
+      <NewsRows limit={4} />
+    </div>
+  </section>
+
+  <CtaBand h="Sẵn sàng cùng IDEA phát triển bền vững?" p="Nhận tư vấn toàn diện từ hội đồng cố vấn cấp cao ngay khi gia nhập liên minh." />
+</Base>

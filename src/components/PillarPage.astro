@@ -1,0 +1,63 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from './CtaBand.astro';
+interface Props {
+  eyebrow: string; title: string; lede: string; img: string;
+  problems: [string, string][]; solutions: [string, string][];
+  vision: [string, string];
+}
+const { eyebrow, title, lede, img, problems, solutions, vision } = Astro.props;
+---
+<Base title={`${eyebrow} — IDEA`} active="economy">
+  <section class="page-head">
+    <div class="wrap cols split-57">
+      <div>
+        <span class="eyebrow">{eyebrow}</span>
+        <h1 class="display">{title}</h1>
+        <p class="lede">{lede}</p>
+        <div class="actions" style="margin-top:30px"><a class="btn btn-lg" href="/lien-he">Liên hệ tư vấn</a></div>
+      </div>
+      <div class="img-r16"><img src={img} alt={eyebrow} /></div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head center">
+        <span class="eyebrow">Theo khảo sát của IDEA, hơn 2.000 doanh nghiệp đang gặp các vấn đề này</span>
+        <h2 class="display-sm">Vì sao bạn cần nguồn lực từ IDEA?</h2>
+      </div>
+      <div class="grid-4">
+        {problems.map(([t, d], i) => (
+          <div class="card"><div class="num">{String(i + 1).padStart(2, '0')}</div><h3>{t}</h3><p>{d}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap cols split-75">
+      <div>
+        <span class="eyebrow">Tầm nhìn của IDEA</span>
+        <h2 class="display-sm">{vision[0]}</h2>
+        <p class="lede" style="margin-top:20px">{vision[1]}</p>
+        <p style="margin-top:16px"><a class="arrow" href="/ve-chung-toi">Về triết lý của IDEA</a></p>
+      </div>
+      <div class="img-r16"><img src="/assets/wide1.webp" alt="" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head center">
+        <span class="eyebrow">Giải pháp của IDEA</span>
+        <h2 class="display-sm">Chúng tôi đồng hành thế nào</h2>
+      </div>
+      <div class="grid-4">
+        {solutions.map(([t, d]) => (<div class="card"><h3>{t}</h3><p>{d}</p></div>))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand h={`Bắt đầu cùng ${eyebrow}`} p="Để lại thông tin, đội ngũ IDEA sẽ liên hệ tư vấn lộ trình phù hợp cho bạn." />
+</Base>

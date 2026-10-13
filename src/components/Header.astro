@@ -1,0 +1,39 @@
+---
+interface Props { active?: string }
+const { active = '' } = Astro.props;
+const cls = (k: string) => (k === active ? 'active' : undefined);
+---
+<header class="site">
+  <div class="wrap">
+    <nav class="navbar">
+      <a class="brand" href="/">
+        <img src="/assets/logo-idea.svg" alt="IDEA" />
+        <span class="brand-text"><b>IDEA</b><small>Liên minh Kinh tế số &amp; Đổi mới sáng tạo</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="Mở menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav">
+        <li><a href="/" class={cls('home')}>Trang chủ</a></li>
+        <li><a href="/ve-chung-toi" class={cls('about')}>Về chúng tôi</a></li>
+        <li class="dropdown">
+          <a href="/economy" class={cls('economy')}>Economy</a>
+          <ul class="menu">
+            <li><a href="/economy">Tổng quan Economy</a></li>
+            <li><a href="/idea-growth">IDEA GROWTH — Gia tăng doanh thu</a></li>
+            <li><a href="/idea-hrds">IDEA HRDs — Tối ưu chi phí</a></li>
+            <li><a href="/idea-tech">IDEA TECH — Phát triển nguồn lực</a></li>
+          </ul>
+        </li>
+        <li><a href="/co-van" class={cls('covan')}>Cố vấn</a></li>
+        <li><a href="/thanh-vien" class={cls('member')}>Thành viên</a></li>
+        <li><a href="/tin-tuc" class={cls('news')}>Tin tức</a></li>
+      </ul>
+      <a class="btn nav-cta" href="/lien-he">Liên hệ</a>
+    </nav>
+  </div>
+</header>
+<script>
+  document.getElementById('navToggle')?.addEventListener('click', () =>
+    document.getElementById('nav')?.classList.toggle('open'));
+</script>

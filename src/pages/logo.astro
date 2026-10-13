@@ -1,0 +1,101 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Nhận diện IDEA">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Đề xuất nhận diện</span>
+      <h1 class="display" style="font-size:clamp(32px,4vw,56px)">Logo IDEA — Liên minh Kinh tế số &amp; Đổi mới sáng tạo</h1>
+      <p class="lede measure">Phối lại từ hai nguồn: biểu tượng vòng tròn – mũi tên của SSCorp và danh xưng IDEA của liên minh. Hai cung đỏ – xanh đan nhau tượng trưng cho sự liên minh; mũi tên phóng qua khe mở là tăng trưởng và đổi mới không giới hạn.</p>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="tile cream" style="min-height:300px">
+        <div class="lockup">
+          <img src="/assets/logo-idea.svg" alt="" />
+          <span class="t"><b>IDEA</b><small>Liên minh Kinh tế số &amp; Đổi mới sáng tạo</small><i>Làm việc tốt mỗi ngày</i></span>
+        </div>
+      </div>
+      <p class="cap">Lockup ngang chính thức — dùng cho header website, văn bản, chữ ký email</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2 class="display-sm" style="margin-bottom:40px">Các phiên bản</h2>
+      <div class="grid-3">
+        <div>
+          <div class="tile white"><img src="/assets/logo-idea.svg" alt="" style="height:120px;width:120px" /></div>
+          <p class="cap">Biểu tượng độc lập — favicon, avatar mạng xã hội</p>
+        </div>
+        <div>
+          <div class="tile white">
+            <div class="lockup stack">
+              <img src="/assets/logo-idea.svg" alt="" style="height:88px;width:88px" />
+              <span class="t"><b style="font-size:32px">IDEA</b><small style="font-size:10.5px">Liên minh Kinh tế số &amp; ĐMST</small></span>
+            </div>
+          </div>
+          <p class="cap">Lockup dọc — ấn phẩm vuông, backdrop sự kiện</p>
+        </div>
+        <div>
+          <div class="tile dark">
+            <div class="lockup">
+              <img src="/assets/logo-idea.svg" alt="" style="height:64px;width:64px" />
+              <span class="t"><b style="font-size:30px">IDEA</b><small style="font-size:10.5px">Liên minh Kinh tế số &amp; ĐMST</small></span>
+            </div>
+          </div>
+          <p class="cap">Trên nền tối — màu biểu tượng giữ nguyên, chữ chuyển trắng</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap cols split-57" style="align-items:start">
+      <div>
+        <h2 class="display-sm" style="margin-bottom:30px">Bảng màu</h2>
+        <div class="grid-2" style="gap:14px">
+          <div class="chip" style="background:#6DBE45">Xanh tăng trưởng<span>#6DBE45 — từ logo SSCorp</span></div>
+          <div class="chip" style="background:#E71C21">Đỏ nhiệt huyết<span>#E71C21 — từ logo SSCorp</span></div>
+          <div class="chip" style="background:#3E8E2E">Xanh đậm wordmark<span>#3E8E2E — chữ IDEA</span></div>
+          <div class="chip" style="background:#2C222D">Mực văn bản<span>#2C222D — nội dung website</span></div>
+        </div>
+      </div>
+      <div>
+        <h2 class="display-sm" style="margin-bottom:30px">Độ đọc theo kích cỡ</h2>
+        <div class="tile cream">
+          <div class="sizes">
+            <div><img src="/assets/logo-idea.svg" alt="" style="height:96px" /><p class="cap">96px</p></div>
+            <div><img src="/assets/logo-idea.svg" alt="" style="height:64px" /><p class="cap">64px</p></div>
+            <div><img src="/assets/logo-idea.svg" alt="" style="height:44px" /><p class="cap">44px — nav</p></div>
+            <div><img src="/assets/logo-idea.svg" alt="" style="height:28px" /><p class="cap">28px</p></div>
+            <div><img src="/assets/logo-idea.svg" alt="" style="height:16px" /><p class="cap">16px — favicon</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .lockup{display:flex;align-items:center;gap:18px}
+    .lockup img{height:72px;width:72px}
+    .lockup .t{display:flex;flex-direction:column;line-height:1}
+    .lockup .t b{font-size:40px;font-weight:800;letter-spacing:.02em;color:var(--brand-green-deep)}
+    .lockup .t small{font-size:13.5px;font-weight:600;letter-spacing:.07em;color:var(--brand-red);text-transform:uppercase;margin-top:6px;white-space:nowrap}
+    .lockup .t i{font-style:normal;font-size:12px;color:var(--muted);margin-top:7px;letter-spacing:.14em;text-transform:uppercase}
+    .lockup.stack{flex-direction:column;text-align:center;gap:14px}
+    .lockup.stack .t{align-items:center}
+    .tile{border-radius:20px;padding:44px 30px;display:flex;align-items:center;justify-content:center;min-height:200px}
+    .tile.cream{background:var(--bg)}
+    .tile.white{background:var(--surface);box-shadow:var(--card-shadow)}
+    .tile.dark{background:#15241A}
+    .tile.dark .t b{color:#fff}
+    .tile.dark .t small{color:#FF8A80}
+    .chip{border-radius:16px;padding:22px;color:#fff;font-size:13px;font-weight:600}
+    .chip span{display:block;font-weight:400;opacity:.85;margin-top:4px;font-size:12px}
+    .sizes{display:flex;align-items:flex-end;gap:34px;flex-wrap:wrap}
+    .cap{font-size:12px;color:var(--faint);margin-top:10px;text-align:center}
+  </style>
+</Base>

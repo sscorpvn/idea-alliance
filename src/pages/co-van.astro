@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+const advisors: [string, string, string, string | null][] = [
+  ['Phạm Vũ Hiệp', 'Chủ tịch Liên minh', 'Chuyên gia kinh doanh xã hội và truyền thông; Thạc sĩ QTKD chuyên ngành TMĐT; nguyên Phó viện trưởng Viện CNTT Nhân dân.', '/assets/hiep.webp'],
+  ['Nguyễn Hồng Chung', 'Chủ tịch DVL Ventures', 'Luật sư; chuyên gia chính sách đầu tư, thẩm định và đánh giá dự án.', null],
+  ['Đặng Việt Phương', 'Kỹ sư Blockchain', '3 năm xây dựng hệ thống blockchain và dApp; 5 năm kinh nghiệm backend và chuỗi cung ứng.', null],
+  ['Nguyễn Thị Thu Hằng', 'CEO Rubik Group', '10 năm kinh nghiệm trong tài chính, đầu tư và quản trị dự án.', null],
+  ['Đoàn Nam Thái', 'Giám đốc AVATECH', 'Chuyên gia hệ thống tự động hoá, camera AI và phân tích dữ liệu.', null],
+  ['Nguyễn Đức Long', 'Chuyên gia phần mềm', 'Chuyên gia xử lý ảnh và cơ sở dữ liệu; nhận nhiều giải thưởng CNTT.', null],
+];
+const initials = (name: string) => name.split(' ').slice(-2).map(w => w[0]).join('').toUpperCase();
+---
+<Base title="Cố vấn — IDEA" active="covan">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Đồng hành cùng thành viên</span>
+      <h1 class="display">Hội đồng cố vấn cấp cao</h1>
+      <p class="lede measure">Thành viên liên minh được tư vấn toàn diện từ các chuyên gia đầu ngành về đầu tư, công nghệ, tài chính và quản trị.</p>
+    </div>
+  </section>
+  <section class="band white">
+    <div class="wrap grid-3">
+      {advisors.map(([n, r, d, img]) => (
+        <div class="person">
+          {img ? <img class="photo" src={img} alt={n} loading="lazy" /> : <div class="initials">{initials(n)}</div>}
+          <h3>{n}</h3>
+          <div class="role">{r}</div>
+          <p>{d}</p>
+          <p style="margin-top:12px"><a class="arrow" href="/lien-he">Liên hệ tư vấn</a></p>
+        </div>
+      ))}
+    </div>
+  </section>
+  <CtaBand h="Đặt lịch tư vấn với hội đồng cố vấn" p="Miễn phí cho thành viên liên minh — để lại thông tin để IDEA sắp xếp buổi tư vấn phù hợp." />
+</Base>

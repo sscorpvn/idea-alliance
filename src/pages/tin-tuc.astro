@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import NewsRows from '../components/NewsRows.astro';
+---
+<Base title="Tin tức — IDEA" active="news">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Tin tức · Sự kiện · Tuyển dụng</span>
+      <h1 class="display">Dòng thông tin IDEA</h1>
+      <p class="lede measure">Góc nhìn về chuyển đổi số, quản trị nguồn lực và văn hoá doanh nghiệp từ liên minh.</p>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <h2 class="display-sm" style="margin-bottom:40px">Bài viết</h2>
+      <NewsRows />
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head"><h2 class="display-sm">Sự kiện</h2></div>
+      <div class="grid-3">
+        <div class="card"><div class="num">—</div><h3>Sự kiện của liên minh</h3><p>Nội dung sự kiện đang được cập nhật. Theo dõi Facebook IDEA để nhận thông báo sớm nhất.</p><a class="arrow" href="https://www.facebook.com/KenSpaceOfficial" target="_blank" rel="noopener">Facebook IDEA</a></div>
+        <div class="card"><div class="num">—</div><h3>Workshop thành viên</h3><p>Chuỗi workshop định kỳ dành riêng cho thành viên liên minh.</p><a class="arrow" href="/thanh-vien">Trở thành thành viên</a></div>
+        <div class="card"><div class="num">—</div><h3>Kết nối kinh doanh</h3><p>Các buổi matching khách hàng – đối tác trong hệ sinh thái IDEA.</p><a class="arrow" href="/lien-he">Liên hệ với IDEA</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap cols split-39">
+      <div>
+        <span class="eyebrow">Tuyển dụng</span>
+        <h2 class="display-sm" style="font-size:clamp(26px,2.6vw,34px)">Làm việc cùng IDEA</h2>
+      </div>
+      <div>
+        <p class="lede">IDEA và các thành viên liên minh thường xuyên tìm kiếm cộng sự về marketing, công nghệ và vận hành. Vị trí cụ thể đang được cập nhật — hoặc chủ động giới thiệu bạn với chúng tôi.</p>
+        <p style="margin-top:22px"><a class="btn" href="/lien-he#ctv">Trở thành cộng tác viên</a></p>
+      </div>
+    </div>
+  </section>
+</Base>

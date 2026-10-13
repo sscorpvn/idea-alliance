@@ -1,0 +1,14 @@
+---
+interface Props { h: string; p: string; btn?: string; href?: string; img?: string }
+const { h, p, btn = 'Liên hệ với IDEA', href = '/lien-he', img = '/assets/tall.webp' } = Astro.props;
+---
+<section class="band cta-band">
+  <div class="wrap cols split-75">
+    <div>
+      <h2>{h}</h2>
+      <p class="lede">{p}</p>
+      <a class="btn btn-lg" href={href}>{btn}</a>
+    </div>
+    <div class="img-r16"><img src={img} alt="" loading="lazy" /></div>
+  </div>
+</section>
