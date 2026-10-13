@@ -140,7 +140,7 @@ header.site .wrap{display:flex;justify-content:center}
 .card{background:var(--mist);border-radius:20px;padding:30px;color:var(--ink)}
 .card h3{font-family:var(--sans);font-weight:500;font-size:19px;margin:14px 0 10px}
 .card p{font-size:15px;line-height:1.6;color:var(--muted)}
-.card .num{font-family:var(--serif);font-size:28px;color:var(--accent);line-height:1}
+.card .num{font-family:var(--serif);font-size:28px;color:var(--ink);opacity:.55;line-height:1}
 .card-white{background:var(--surface);border-radius:16px;padding:30px;box-shadow:var(--card-shadow)}
 .card-top{border-radius:30px 30px 0 0}
 .card .arrow{font-size:15px;display:inline-block;margin-top:12px}
@@ -180,6 +180,7 @@ header.site .wrap{display:flex;justify-content:center}
 .person p{font-size:14.5px}
 
 /* ---- pricing ---- */
+.price .eyebrow{color:var(--muted)}
 .price{background:var(--surface);border-radius:20px;padding:40px 34px;display:flex;flex-direction:column;gap:6px}
 .price.feature{background:var(--mist)}
 .band.white .price{background:var(--mist)}
