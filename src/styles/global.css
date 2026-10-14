@@ -3,6 +3,7 @@
    (PikSpec extraction: colours, type, shape, layout recipe)
    ============================================================ */
 :root{
+  color-scheme: light;
   /* semantic roles — from the spec */
   --bg:#FBF5F0;            /* color-background */
   --surface:#FFFFFF;       /* color-surface */
@@ -26,28 +27,6 @@
   --brand-red:#E71C21;
   --serif:"Lora",Georgia,serif;
   --sans:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#1A1612; --surface:#231E18; --mist:#2B251D; --tint:#231E18;
-    --ink:#F3EBE4; --ink-strong:#FBF5F0; --muted:#AFA698; --faint:#8B8378;
-    --action:#F3EBE4; --on-action:#1A1612; --accent:#FF8A3D;
-    --green:#6FBF8F; --blue:#8AA8E8;
-    --hairline:rgba(243,235,228,.75); --line:rgba(243,235,228,.16);
-    --nav-shadow:rgba(0,0,0,.5) 0px 4px 16px 0px;
-    --card-shadow:rgba(0,0,0,.4) 0px 4px 10px 0px;
-    --brand-green-deep:#8ED468; --brand-red:#FF6B64;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#1A1612; --surface:#231E18; --mist:#2B251D; --tint:#231E18;
-  --ink:#F3EBE4; --ink-strong:#FBF5F0; --muted:#AFA698; --faint:#8B8378;
-  --action:#F3EBE4; --on-action:#1A1612; --accent:#FF8A3D;
-  --green:#6FBF8F; --blue:#8AA8E8;
-  --hairline:rgba(243,235,228,.75); --line:rgba(243,235,228,.16);
-  --nav-shadow:rgba(0,0,0,.5) 0px 4px 16px 0px;
-  --card-shadow:rgba(0,0,0,.4) 0px 4px 10px 0px;
-  --brand-green-deep:#8ED468; --brand-red:#FF6B64;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
