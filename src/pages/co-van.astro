@@ -1,36 +1,84 @@
 ---
 import Base from '../layouts/Base.astro';
 import CtaBand from '../components/CtaBand.astro';
-const advisors: [string, string, string, string | null][] = [
-  ['Phạm Vũ Hiệp', 'Chủ tịch Liên minh', 'Chuyên gia kinh doanh xã hội và truyền thông; Thạc sĩ QTKD chuyên ngành TMĐT; nguyên Phó viện trưởng Viện CNTT Nhân dân.', '/assets/hiep.webp'],
-  ['Nguyễn Hồng Chung', 'Chủ tịch DVL Ventures', 'Luật sư; chuyên gia chính sách đầu tư, thẩm định và đánh giá dự án.', null],
-  ['Đặng Việt Phương', 'Kỹ sư Blockchain', '3 năm xây dựng hệ thống blockchain và dApp; 5 năm kinh nghiệm backend và chuỗi cung ứng.', null],
-  ['Nguyễn Thị Thu Hằng', 'CEO Rubik Group', '10 năm kinh nghiệm trong tài chính, đầu tư và quản trị dự án.', null],
-  ['Đoàn Nam Thái', 'Giám đốc AVATECH', 'Chuyên gia hệ thống tự động hoá, camera AI và phân tích dữ liệu.', null],
-  ['Nguyễn Đức Long', 'Chuyên gia phần mềm', 'Chuyên gia xử lý ảnh và cơ sở dữ liệu; nhận nhiều giải thưởng CNTT.', null],
+const board: [string, string, string, string][] = [
+  ['Phạm Vũ Hiệp', 'Chủ tịch Liên minh · Trưởng ban Công nghệ', 'Chủ tịch HĐTV SSCorp, Nhanlucdy; CEO PAMA Việt Nam; chuyên gia cao cấp về công nghệ, an ninh mạng, chuyển đổi số: SmartCity, ERP, E-Learning, Social Business.', '/assets/team-hiep.webp'],
+  ['Vũ Minh Lý', 'Phó Chủ tịch · Trưởng ban Truyền thông', 'Phó Tổng biên tập Tạp chí Nông nghiệp và Môi trường (Bộ NN&MT); nguyên Uỷ viên BCH TƯ Đoàn, nguyên Giám đốc Trung tâm Tình nguyện Quốc gia.', '/assets/team-ly.webp'],
+  ['Nguyễn Hồng Chung', 'Phó Chủ tịch · Trưởng ban Pháp chế', 'Chủ tịch HĐQT & CEO DVL Group; luật sư, chuyên gia chính sách đầu tư, đấu thầu, mua sắm công, QLDA, bất động sản.', '/assets/team-chung.webp'],
+  ['Vũ Lâm Bằng', 'Phó Chủ tịch · Trưởng ban An ninh mạng', 'Tổng giám đốc BitCare JSC; Phó Tổng giám đốc CMC Cyber Security; chuyên gia cấp cao về an ninh mạng và an toàn thông tin.', '/assets/team-bang.webp'],
+  ['Dương Quốc Sỹ', 'Phó Chủ tịch · Trưởng ban Chuyên gia, HĐKH', 'Tiến sĩ Hoá học; Phó Chủ tịch Hiệp hội Tinh dầu – Hương liệu – Mỹ phẩm Việt Nam; hơn 65 năm kinh nghiệm nghiên cứu khoa học.', '/assets/team-sy.webp'],
+  ['Nguyễn Văn Quân', 'Phó Chủ tịch · Trưởng ban Quản lý quỹ', 'Chủ tịch Hội đồng quản lý Viện IETD; chuyên gia tài chính doanh nghiệp, kết nối nguồn vốn, xúc tiến thương mại trong và ngoài nước.', '/assets/team-quan.webp'],
+  ['Nguyễn Thị Hằng', 'Phó Chủ tịch · Trưởng ban QLVH & CĐS', 'Viện trưởng Viện Nghiên cứu Phát triển Kinh tế Thương mại (IETD); chuyên gia tư vấn công nghệ & phát triển doanh nghiệp, 15 năm đồng hành cùng DN.', '/assets/team-hang.webp'],
+  ['Nguyễn Vũ Toàn', 'Phó Chủ tịch · Trưởng ban Kinh doanh & CSKH', 'Phó Viện trưởng Viện IETD; chuyên gia công nghệ, quản lý dự án, truyền thông, đối ngoại trong hoạt động bất động sản và chuyển đổi số.', '/assets/team-toan.webp'],
 ];
-const initials = (name: string) => name.split(' ').slice(-2).map(w => w[0]).join('').toUpperCase();
+const experts: [string, string][] = [
+  ['Tạ Thuỷ', 'Phó Chủ tịch · Cố vấn cấp cao về Công nghệ — Co-founder & CEO SReal, SBCorp, Butta'],
+  ['Dương Ngọc Tùng', 'Phó Chủ tịch · Trưởng ban Đối ngoại — Phó GĐ công nghệ Nhanlucdy'],
+  ['Nguyễn Thị Thu Hằng', 'Phó Chủ tịch · Trưởng ban Tài chính — Founder & CEO Rubik Group'],
+  ['Nguyễn Thắng', 'Tổng thư ký Liên minh — Thạc sĩ Hệ thống điện ĐH Bách Khoa HN, thành viên BĐH SSCorp'],
+  ['Lê Quan Phước', 'Trưởng ban Sáng tạo & Thương hiệu — hơn 18 năm branding, media'],
+  ['Lưu Phương Thuỷ', 'Chánh Văn phòng — Tổng giám đốc SSCorp'],
+  ['Đặng Việt Phương', 'Trưởng ban Phát triển sản phẩm — Giám đốc Công nghệ Kén Space, SSCorp'],
+  ['Nguyễn Hoàng Hà', 'Trưởng ban Nguồn lực Nhân sự — Founder & CEO Nhanlucdy.vn'],
+  ['Trần Hồng Quang', 'Member & Advisor — CTO PAMA Việt Nam, giảng viên An ninh mạng HV Kỹ thuật Quân sự'],
+  ['Đỗ Đức Trung', 'Thư ký Ban Kinh doanh — Co-founder AVA Group, Moon Crowdfunding'],
+  ['Lê Mậu Tùng', 'Member · Cố vấn Sáng tạo & Media — Founder & CEO Tiktak, AZMedia'],
+  ['Ngô Hưng', 'Member · Chuyên gia cấp cao ANM & AI — Co-founder & CTO Bitcare, CTO CMC Securit'],
+  ['John Koldborg', 'Member & Advisor — Chủ tịch HĐQT Nebulanet (Đan Mạch)'],
+  ['Jindra Šavel', 'Member & Advisor — CEO Novicom (Czech), 30 năm kinh nghiệm CNTT'],
+  ['Jiro Yamamoto', 'Member · Chuyên gia kiến trúc phần mềm — CEO Open Reach Tech Inc.'],
+  ['Lê Tuấn Anh', 'Member & Advisor — Founder & CEO Beebox, bác sĩ, chuyên gia sức khoẻ trẻ em'],
+  ['Đặng Đức Hào', 'Member & Advisor — nhà báo, giảng viên đại học về truyền thông & marketing'],
+  ['Nguyễn Đức Long', 'Member & Advisor — hơn 20 năm CNTT, nhân tài Đất Việt (Vietkey)'],
+  ['Đoàn Nam Thái', 'Member & Advisor — Founder & CEO AVATech, Tiến sĩ ĐHQG Seoul'],
+  ['Ngô Quang Thắng', 'Member & Advisor — Founder, luật sư, GĐĐH DVL Lawfirm'],
+  ['Nguyễn Bá Đức', 'Member & Advisor — Founder & CEO Homedy.com, Anhso.net'],
+  ['Nguyễn Đặng Hoàng Sơn', 'Member & Advisor — sáng lập sàn TMĐT zaloka.com, GĐ chiến lược biweb.vn'],
+  ['Thành Cát Đăng Khoa', 'Member & Advisor — đại diện phát triển Digital Twin, Metaverse của Sliver-Sea Media tại VN'],
+];
 ---
-<Base title="Cố vấn — IDEA" active="covan">
+<Base title="Đội ngũ — IDEA" active="covan">
   <section class="page-head">
     <div class="wrap">
-      <span class="eyebrow">Đồng hành cùng thành viên</span>
-      <h1 class="display">Hội đồng cố vấn cấp cao</h1>
-      <p class="lede measure">Thành viên liên minh được tư vấn toàn diện từ các chuyên gia đầu ngành về đầu tư, công nghệ, tài chính và quản trị.</p>
+      <span class="eyebrow">Đội ngũ liên minh</span>
+      <h1 class="display">Ban lãnh đạo &amp; chuyên gia IDEA</h1>
+      <p class="lede measure">Nòng cốt là các chuyên gia hàng đầu về công nghệ, an ninh mạng, pháp chế, tài chính và truyền thông — đồng hành cùng thành viên qua từng ban chuyên môn.</p>
     </div>
   </section>
+
   <section class="band white">
-    <div class="wrap grid-3">
-      {advisors.map(([n, r, d, img]) => (
-        <div class="person">
-          {img ? <img class="photo" src={img} alt={n} loading="lazy" /> : <div class="initials">{initials(n)}</div>}
-          <h3>{n}</h3>
-          <div class="role">{r}</div>
-          <p>{d}</p>
-          <p style="margin-top:12px"><a class="arrow" href="/lien-he">Liên hệ tư vấn</a></p>
-        </div>
-      ))}
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Hội đồng liên minh</span>
+        <h2 class="display-sm">Ban lãnh đạo</h2>
+      </div>
+      <div class="grid-4">
+        {board.map(([n, r, d, img]) => (
+          <div class="person">
+            <img class="photo" src={img} alt={n} loading="lazy" style="aspect-ratio:1;border-radius:50%" />
+            <h3 style="font-size:19px">{n}</h3>
+            <div class="role" style="font-size:11.5px">{r}</div>
+            <p style="font-size:13.5px">{d}</p>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
-  <CtaBand h="Đặt lịch tư vấn với hội đồng cố vấn" p="Miễn phí cho thành viên liên minh — để lại thông tin để IDEA sắp xếp buổi tư vấn phù hợp." />
+
+  <section class="band">
+    <div class="wrap cols split-39" style="align-items:start">
+      <div>
+        <span class="eyebrow">Mạng lưới chuyên môn</span>
+        <h2 class="display-sm" style="font-size:clamp(26px,2.6vw,34px)">Chuyên gia &amp; cố vấn thành viên</h2>
+        <p class="lede" style="margin-top:16px">Cùng đội ngũ kỹ sư, chuyên viên phát triển sản phẩm của các đơn vị thành viên trong liên minh.</p>
+      </div>
+      <div class="rows">
+        {experts.map(([n, r]) => (
+          <div class="row-item"><div class="meta">Chuyên gia</div><div><h3 style="font-size:18px">{n}</h3><p>{r}</p></div></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand h="Kết nối với các ban chuyên môn" p="Để lại thông tin để IDEA sắp xếp buổi trao đổi với đúng chuyên gia bạn cần." />
 </Base>

@@ -4,17 +4,24 @@ import CtaBand from '../components/CtaBand.astro';
 import PillarCards from '../components/PillarCards.astro';
 import NewsRows from '../components/NewsRows.astro';
 import quotes from '../data/testimonials.json';
+const principles = [
+  ['Gia tăng doanh thu', 'Hệ sinh thái truyền thông, bán hàng và kết nối khách hàng – đối tác cho thành viên liên minh.'],
+  ['Tối ưu chi phí', 'Uỷ thác vận hành với các phòng chức năng thuê ngoài, tập trung nguồn lực cho cốt lõi.'],
+  ['Phát triển nguồn lực bền vững', 'Tư vấn, đào tạo và kiến trúc doanh nghiệp theo hệ quản trị nguồn lực Trí – Nhân – Tài – Vật.'],
+  ['Tận dụng nguồn lực xã hội', 'Sử dụng hiệu quả các nguồn lực xã hội — tư duy cộng sinh, đồng sở hữu, cùng tạo giá trị.'],
+  ['Phục hồi văn hoá truyền thống', 'Góp phần phục hồi văn hoá truyền thống Việt Nam và thế giới trong đời sống kinh doanh.'],
+];
 ---
 <Base title="IDEA — Liên minh Kinh tế số & ĐMST" active="home">
   <section class="hero">
     <div class="wrap cols">
       <div>
-        <span class="eyebrow">Liên minh Kinh tế số &amp; Đổi mới sáng tạo</span>
+        <span class="eyebrow">Innovation &amp; Digital Economy Alliance — Làm việc tốt mỗi ngày</span>
         <h1 class="display">Nơi kiến tạo không gian sống và làm việc</h1>
-        <p class="lede">Liên minh IDEA đồng hành cùng cá nhân, nhóm, tổ chức và doanh nghiệp phát triển từ hạt mầm đến trưởng thành — trên nền tảng quản trị nguồn lực xã hội.</p>
+        <p class="lede">IDEA là nơi kiến tạo không gian sống và làm việc từ ươm tạo tới trưởng thành — phát triển cho cá nhân đến nhóm, tổ chức, doanh nghiệp và xa hơn nữa là quê hương, xã hội.</p>
         <div class="actions">
           <a class="btn btn-lg" href="/thanh-vien">Tham gia liên minh</a>
-          <a class="arrow" href="/economy">Khám phá IDEA Economy</a>
+          <a class="arrow" href="/economy">Sản phẩm &amp; giải pháp</a>
         </div>
       </div>
       <div class="hero-img"><img src="/assets/hero.webp" alt="Không gian IDEA" /></div>
@@ -24,26 +31,17 @@ import quotes from '../data/testimonials.json';
   <section class="band white">
     <div class="wrap">
       <div class="band-head">
-        <span class="eyebrow">Giá trị dành cho thành viên</span>
-        <h2 class="display-sm">IDEA mang lại gì cho bạn?</h2>
+        <span class="eyebrow">Triết lý kinh doanh có trách nhiệm xã hội</span>
+        <h2 class="display-sm">Năm tôn chỉ cốt lõi</h2>
       </div>
-      <div class="grid-4">
-        <div class="card"><div class="num">01</div>
-          <h3>Gia tăng doanh thu</h3>
-          <p>Thiết lập hệ sinh thái truyền thông, bán hàng và hỗ trợ thành viên kết nối khách hàng, đối tác theo chuẩn chất lượng chung.</p>
-          <a class="arrow" href="/idea-growth">IDEA GROWTH</a></div>
-        <div class="card"><div class="num">02</div>
-          <h3>Tối ưu chi phí</h3>
-          <p>Hệ quản trị nhân sự – hành chính cho phép thành viên uỷ thác vận hành văn phòng, tập trung vào năng lực cốt lõi.</p>
-          <a class="arrow" href="/idea-hrds">IDEA HRDs</a></div>
-        <div class="card"><div class="num">03</div>
-          <h3>Phát triển nguồn lực</h3>
-          <p>Tư vấn và kiến trúc doanh nghiệp theo triết lý quản trị nguồn lực bền vững của IDEA.</p>
-          <a class="arrow" href="/idea-tech">IDEA TECH</a></div>
-        <div class="card"><div class="num">04</div>
-          <h3>Nguồn lực xã hội</h3>
-          <p>Sở hữu chung — cùng đóng góp, cùng thụ hưởng giá trị cộng đồng mà liên minh tạo ra.</p>
-          <a class="arrow" href="/ve-chung-toi">Triết lý IDEA</a></div>
+      <div class="grid-3">
+        {principles.map(([t, d], i) => (
+          <div class="card"><div class="num">{String(i + 1).padStart(2, '0')}</div><h3>{t}</h3><p>{d}</p></div>
+        ))}
+        <div class="card" style="display:flex;flex-direction:column;justify-content:center">
+          <p style="color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.5">Hành động theo kim chỉ nam:<br /><b style="font-weight:500">Chắc chắn – Tin cậy – Hiệu quả – Giá thành phù hợp</b></p>
+          <a class="arrow" href="/ve-chung-toi">Triết lý của liên minh</a>
+        </div>
       </div>
     </div>
   </section>
@@ -51,12 +49,13 @@ import quotes from '../data/testimonials.json';
   <section class="band">
     <div class="wrap cols split-75">
       <div>
-        <span class="eyebrow">Phục hồi văn hoá</span>
-        <h2 class="display-sm">Cùng nhau xây dựng văn hoá sống và làm việc</h2>
-        <p class="lede" style="margin-top:20px">Thành viên IDEA cùng vun đắp giá trị nhân văn của gia đình và cộng đồng, thắt chặt sợi dây liên kết bản địa — nền móng cho một nền kinh tế chia sẻ tử tế và bền vững.</p>
-        <p style="margin-top:16px"><a class="arrow" href="/ve-chung-toi">Văn hoá liên minh</a></p>
+        <span class="eyebrow">Từ 2017 đến nay</span>
+        <h2 class="display-sm">Từ IETD đến Liên minh IDEA</h2>
+        <p class="lede" style="margin-top:20px">Năm 2017, Viện Nghiên cứu Phát triển Kinh tế Thương mại (IETD), SSCorp, DVL Ventures cùng các doanh nghiệp trong hệ sinh thái thành lập liên minh với nòng cốt là đội ngũ chuyên gia công nghệ thông tin, đồng hành chuyển đổi số cho hàng trăm doanh nghiệp qua từng giai đoạn công nghệ 2.0 – 3.0 – 4.0.</p>
+        <p style="margin-top:14px">Gần đây nhất, Trung tâm KHCN Đổi mới sáng tạo &amp; Chuyển đổi số (CSTID) – Viện IETD đã chủ trì thành lập <b style="color:var(--ink);font-weight:500">Liên minh Kinh tế số &amp; Đổi mới sáng tạo (IDEA)</b> — liên minh kết nối nguồn lực quốc gia và quốc tế về nghiên cứu, tư vấn chính sách, phát triển hệ sinh thái và triển khai các giải pháp chuyển đổi số – đổi mới sáng tạo.</p>
+        <p style="margin-top:16px"><a class="arrow" href="/ve-chung-toi">Câu chuyện đầy đủ</a></p>
       </div>
-      <div class="img-r16"><img src="/assets/wide1.webp" alt="Hoạt động cộng đồng IDEA" loading="lazy" /></div>
+      <div class="img-r16"><img src="/assets/wide1.webp" alt="Hoạt động liên minh IDEA" loading="lazy" /></div>
     </div>
   </section>
 
@@ -64,7 +63,7 @@ import quotes from '../data/testimonials.json';
     <div class="wrap">
       <div class="band-head center">
         <span class="eyebrow">IDEA Economy</span>
-        <h2 class="display-sm">Ba trụ cột của hệ sinh thái</h2>
+        <h2 class="display-sm">Các không gian dịch vụ của liên minh</h2>
       </div>
       <PillarCards />
     </div>
@@ -73,7 +72,7 @@ import quotes from '../data/testimonials.json';
   <section class="band">
     <div class="wrap">
       <div class="band-head center">
-        <span class="eyebrow">Chuyên gia nói về IDEA</span>
+        <span class="eyebrow">Chuyên gia nói về liên minh</span>
         <h2 class="display-sm">Được tin tưởng bởi những người đồng hành</h2>
       </div>
       <div class="grid-3">
@@ -89,6 +88,16 @@ import quotes from '../data/testimonials.json';
 
   <section class="band white">
     <div class="wrap">
+      <div class="band-head center">
+        <span class="eyebrow">Đối tác &amp; khách hàng tiêu biểu</span>
+        <h2 class="display-sm">Đồng hành cùng các thương hiệu lớn</h2>
+      </div>
+      <img class="r16" src="/assets/partners.webp" alt="VinGroup, FLC Group, BIDV, Lazada, IMC, Garco 10, Viettel, be, Thiên Khôi, Thăng Tiến, Hanvico, UBCG Hà Nội, SB Fund, Austdoor, DAMAC, BanzaiHobby, OpenReachTech" loading="lazy" style="max-width:1000px;margin:0 auto" />
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
       <div class="band-head" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap">
         <h2 class="display-sm">Tin tức mới</h2>
         <a class="arrow" href="/tin-tuc">Tất cả bài viết</a>
@@ -97,5 +106,5 @@ import quotes from '../data/testimonials.json';
     </div>
   </section>
 
-  <CtaBand h="Sẵn sàng cùng IDEA phát triển bền vững?" p="Nhận tư vấn toàn diện từ hội đồng cố vấn cấp cao ngay khi gia nhập liên minh." />
+  <CtaBand h="Sẵn sàng cùng IDEA phát triển bền vững?" p="Kết nối – Thích nghi – Phát triển. Để lại thông tin để nhận tư vấn từ các ban chuyên môn của liên minh." />
 </Base>

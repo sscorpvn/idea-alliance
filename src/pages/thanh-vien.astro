@@ -1,43 +1,46 @@
 ---
 import Base from '../layouts/Base.astro';
 import CtaBand from '../components/CtaBand.astro';
-const benefits = [
-  'Tư vấn toàn diện từ hội đồng cố vấn cấp cao ngay khi gia nhập',
-  'Uỷ thác vận hành — phòng ban thuê ngoài HRD, Marketing, IT',
-  'Truyền thông thương hiệu trong hệ sinh thái liên minh',
-  'Kết nối nguồn lực, khách hàng và đối tác giữa các thành viên',
-  'Cùng sở hữu và thụ hưởng giá trị cộng đồng của liên minh',
+const advantages: [string, string][] = [
+  ['IETD & DVL Ventures', 'Đầu tư, gọi vốn, quản lý & phát triển tài sản'],
+  ['Nhanlucdy.vn', 'Nền tảng chăm sóc con người, sức khoẻ'],
+  ['SSCorp & ICTS', 'Giải pháp xã hội và Social Business'],
+  ['CSTID & SSCorp', 'Công nghệ, chuyển đổi số và tái cấu trúc'],
+  ['DVL Group', 'Luật, đấu thầu, đầu tư, quản lý dự án'],
+  ['ATZ, TikTak & SliverSea Media', 'Design & Branding, Video Product & Media'],
+  ['VIPDS & HYDROS', 'Môi trường và các giải pháp xanh: cấp & xử lý nước thải, năng lượng xanh'],
+  ['… và các thành viên', 'Đa ngành nghề, đa lĩnh vực trong hệ sinh thái liên minh'],
 ];
 ---
 <Base title="Thành viên — IDEA" active="member">
   <section class="page-head">
     <div class="wrap">
-      <span class="eyebrow">IDEA Membership</span>
+      <span class="eyebrow">IDE Alliance Membership</span>
       <h1 class="display">Trở thành thành viên liên minh</h1>
-      <p class="lede measure">Ba hình thức tham gia — cá nhân, tổ chức và đối tác liên minh — cùng chia sẻ nguồn lực và giá trị trong một hệ sinh thái.</p>
+      <p class="lede measure">Thành viên Liên minh IDE là các tổ chức, doanh nghiệp, startup, dự án kinh doanh, các lãnh đạo và cá nhân mong muốn tham gia, cam kết đồng hành cùng triết lý, hệ tư tưởng và văn hoá của liên minh.</p>
     </div>
   </section>
 
   <section class="band white">
     <div class="wrap grid-3">
-      <article class="pillar"><img src="/assets/home2.webp" alt="" loading="lazy" />
-        <div class="pad"><h3 class="title-sans">Thành viên cá nhân</h3><p>Chuyên gia, người khởi nghiệp muốn phát triển trong cộng đồng tử tế.</p><a class="arrow" href="/economy">Quyền lợi</a></div></article>
       <article class="pillar"><img src="/assets/home3.webp" alt="" loading="lazy" />
-        <div class="pad"><h3 class="title-sans">Thành viên tổ chức</h3><p>Doanh nghiệp cần nguồn lực vận hành, truyền thông và công nghệ.</p><a class="arrow" href="/economy">Quyền lợi</a></div></article>
+        <div class="pad"><h3 class="title-sans">Tổ chức &amp; doanh nghiệp</h3><p>Cần nguồn lực vận hành, truyền thông, công nghệ và kết nối thị trường trong hệ sinh thái.</p><a class="arrow" href="/economy">Giải pháp cho doanh nghiệp</a></div></article>
+      <article class="pillar"><img src="/assets/home2.webp" alt="" loading="lazy" />
+        <div class="pad"><h3 class="title-sans">Startup &amp; dự án kinh doanh</h3><p>Khởi sự kinh doanh với sự đồng hành của chuyên gia, nhà đầu tư và cộng đồng liên minh.</p><a class="arrow" href="/co-van">Đội ngũ chuyên gia</a></div></article>
       <article class="pillar"><img src="/assets/home4.webp" alt="" loading="lazy" />
-        <div class="pad"><h3 class="title-sans">Đối tác liên minh</h3><p>Tổ chức đồng hành chiến lược, cùng kiến tạo hệ sinh thái.</p><a class="arrow" href="/co-van">Hội đồng cố vấn</a></div></article>
+        <div class="pad"><h3 class="title-sans">Lãnh đạo &amp; cá nhân</h3><p>Leader và chuyên gia muốn phát triển trong cộng đồng kinh doanh tác động xã hội tử tế.</p><a class="arrow" href="/ve-chung-toi">Triết lý liên minh</a></div></article>
     </div>
   </section>
 
   <section class="band">
-    <div class="wrap cols split-39">
+    <div class="wrap cols split-39" style="align-items:start">
       <div>
-        <span class="eyebrow">Vì sao chọn IDEA?</span>
-        <h2 class="display-sm" style="font-size:clamp(26px,2.6vw,34px)">Quyền lợi thành viên</h2>
+        <span class="eyebrow">IDEA Co-Growth Space</span>
+        <h2 class="display-sm" style="font-size:clamp(26px,2.6vw,34px)">Lợi thế từ các thành viên đồng hành</h2>
       </div>
       <div class="rows">
-        {benefits.map((b, i) => (
-          <div class="row-item"><div class="meta">{String(i + 1).padStart(2, '0')}</div><div><h3>{b}</h3></div></div>
+        {advantages.map(([t, d]) => (
+          <div class="row-item"><div class="meta">Thành viên</div><div><h3 style="font-size:18px">{t}</h3><p>{d}</p></div></div>
         ))}
       </div>
     </div>
@@ -46,25 +49,16 @@ const benefits = [
   <section class="band white">
     <div class="wrap">
       <div class="band-head center">
-        <span class="eyebrow">Phí thành viên</span>
-        <h2 class="display-sm">Minh bạch và đơn giản</h2>
+        <span class="eyebrow">Quyền lợi &amp; thủ tục</span>
+        <h2 class="display-sm">Gia nhập thế nào?</h2>
       </div>
-      <div class="grid-2" style="max-width:860px;margin:0 auto">
-        <div class="price">
-          <span class="eyebrow" style="margin-bottom:6px">Cá nhân</span>
-          <div class="amount">6.000.000₫</div><div class="per">mỗi năm</div>
-          <ul><li>Tư vấn từ hội đồng cố vấn</li><li>Sự kiện và đào tạo của liên minh</li><li>Kết nối khách hàng – đối tác</li></ul>
-          <a class="btn-ghost" href="/lien-he">Liên hệ tư vấn</a>
-        </div>
-        <div class="price feature">
-          <span class="eyebrow" style="margin-bottom:6px">Tổ chức</span>
-          <div class="amount">12.000.000₫</div><div class="per">mỗi năm</div>
-          <ul><li>Toàn bộ quyền lợi cá nhân</li><li>Phòng ban thuê ngoài HRD · Marketing · IT</li><li>Truyền thông thương hiệu nội khối</li></ul>
-          <a class="btn" href="/lien-he">Liên hệ tư vấn</a>
-        </div>
+      <div class="grid-3">
+        <div class="card"><div class="num">01</div><h3>Trao đổi với Ban thư ký</h3><p>Để lại thông tin — Ban thư ký liên minh sẽ liên hệ giới thiệu mô hình, quyền lợi và mức phí thành viên phù hợp.</p></div>
+        <div class="card"><div class="num">02</div><h3>Cam kết đồng hành</h3><p>Thống nhất triết lý, hệ tư tưởng và văn hoá của liên minh — hành động theo kim chỉ nam chung.</p></div>
+        <div class="card"><div class="num">03</div><h3>Kết nối nguồn lực</h3><p>Tham gia các ban chuyên môn, không gian dịch vụ và cộng đồng IDEA Community.</p></div>
       </div>
     </div>
   </section>
 
-  <CtaBand h="Gia nhập Liên minh IDEA" p="Để lại thông tin — IDEA sẽ liên hệ hướng dẫn thủ tục thành viên." img="/assets/partner1.webp" />
+  <CtaBand h="Gia nhập Liên minh IDEA" p="Để lại thông tin — Ban thư ký sẽ liên hệ hướng dẫn thủ tục thành viên." img="/assets/partner1.webp" />
 </Base>

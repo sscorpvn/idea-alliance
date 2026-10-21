@@ -2,61 +2,74 @@
 import Base from '../layouts/Base.astro';
 import CtaBand from '../components/CtaBand.astro';
 import PillarCards from '../components/PillarCards.astro';
-const services = [
-  ['IT thuê ngoài', 'Đội ngũ công nghệ trọn gói cho doanh nghiệp chưa có phòng IT.'],
-  ['Phòng HRD thuê ngoài', 'Hành chính – nhân sự và tuyển dụng vận hành theo yêu cầu.'],
-  ['Phòng Marketing thuê ngoài', 'Chiến lược, nội dung và quảng cáo với chi phí tối ưu.'],
-  ['Đào tạo & hướng nghiệp', 'Chương trình phát triển kỹ năng cho đội ngũ và cá nhân.'],
-  ['Thiết kế logo & nhận diện', 'Bộ nhận diện thương hiệu đồng bộ, chuyên nghiệp.'],
-  ['Social E-learning', 'Hệ thống đào tạo trực tuyến nội bộ cho tổ chức.'],
-  ['Social E-commerce', 'Giải pháp thương mại điện tử gắn với cộng đồng.'],
-  ['Social SCM', 'Quản trị chuỗi cung ứng trên nền tảng chia sẻ.'],
-  ['Social HRM', 'Quản trị nhân sự số hoá, minh bạch và linh hoạt.'],
-  ['Social ERP', 'Quản trị tổng thể nguồn lực doanh nghiệp.'],
-  ['Social CRM', 'Quản trị quan hệ khách hàng đa kênh.'],
-  ['Social Marketing', 'Tiếp thị dựa trên sức mạnh cộng đồng và mạng xã hội.'],
-  ['Số hoá dữ liệu', 'Chuyển đổi tài liệu, quy trình sang môi trường số.'],
-  ['Bản đồ số', 'Bản đồ số dẫn lối doanh nghiệp tiếp cận thị trường.'],
+const solutions = [
+  ['Cyber Security — Bitcare', 'An ninh an toàn thông tin: Anti-Ransomware, chống thất thoát dữ liệu (DLP), giám sát phản ứng chủ động (EDR), Pentest & Tuning Performance.'],
+  ['Pama XSC', 'Giải pháp an ninh mạng toàn diện: Cyber Range đào tạo, điều tra, bảo vệ và thẩm định chất lượng phần mềm — Cloud & On-Premise.'],
+  ['GRYPHON — BlueNet', 'Đưa AI từ công cụ cá nhân thành năng lực vận hành có kiểm soát, có lịch sử và mở rộng được trong tổ chức.'],
+  ['AI Workflow & Hora Kit — OpenReachTech', 'Nền tảng Chiho (LLM & RAG), CRM Leepai, AI báo giá EG và bộ khung phát triển AI Hora Kit (mã nguồn mở Apache 2.0).'],
+  ['Software Factory', 'Từ yêu cầu đến đặt phát triển trong một dịch vụ: AI tạo mock chạy được → đặc tả → Hora Kit triển khai, kiểm thử, xác minh bảo mật.'],
+  ['Bản đồ số KCN — VIPDS', 'Bản đồ số khu công nghiệp & cổng thông tin xúc tiến đầu tư khu vực phía Bắc (đề án cùng NIPISC – Bộ Kế hoạch và Đầu tư).'],
+  ['Tài sản đấu giá & Tài sản Việt — SSCorp', 'Hệ thống thông tin tài sản, số hoá tài sản (3D/VR360), đấu giá trực tuyến và bản đồ làng nghề số.'],
+  ['Quản lý doanh nghiệp SMEs', 'Bộ giải pháp trên nền tảng Google: SBIZ Sales Management, SPMS CRM, Quản lý dự án.'],
+  ['Điện – Tự động hoá – Năng lượng — LOTEC', '5 trụ cột: điện, an ninh thông minh, tự động hoá công nghiệp, năng lượng sạch và công nghệ số cho hạ tầng – sản xuất.'],
+  ['AI cho sản xuất — AVATECH', 'Máy kiểm tra Vision AI (aVisShaft, aVisGlass, aVisBot, aVisSort), tự động hoá doanh nghiệp, đào tạo "AI thực chiến".'],
+  ['Nhân lực Đông Y Việt Nam', 'Hạ tầng dữ liệu số và hệ sinh thái nhân lực ngành Y học cổ truyền: đào tạo chứng chỉ, kết nối thầy thuốc – phòng khám – doanh nghiệp.'],
+  ['Hệ sinh thái số hoá dược liệu', 'Cơ sở dữ liệu cây thuốc, cổng quản trị quốc gia, bản đồ GIS vùng trồng và truy xuất QR chuẩn GACP-WHO.'],
 ];
-const fields = 'Sức khoẻ · Điện tử · Trang sức · Thực phẩm · Đồ uống · Media agency · Hệ thống phần mềm · Luật · Thuế · Tái cấu trúc doanh nghiệp';
+const process = [
+  ['Prepare', 'Research (R&D) thấu hiểu nhu cầu; Estimate đề xuất giải pháp, lịch trình và chi phí.'],
+  ['Plan & Design', 'Phân tích logic nghiệp vụ, kế hoạch triển khai và mốc bàn giao; kiến trúc & thiết kế chức năng.'],
+  ['Implementation', 'Kết nối các bên liên quan trong liên minh; code – test – pilot – scale, bàn giao theo milestone.'],
+  ['Operation & Optimization', 'Hỗ trợ vận hành sau bàn giao, đánh giá, tối ưu và nhân bản mô hình (quốc tế hoá).'],
+];
 ---
-<Base title="Economy — IDEA" active="economy">
+<Base title="Sản phẩm & Giải pháp — IDEA" active="economy">
   <section class="page-head">
     <div class="wrap cols split-57">
       <div>
         <span class="eyebrow">IDEA Economy</span>
-        <h1 class="display">Một hệ sinh thái, ba trụ cột, mọi nguồn lực</h1>
-        <p class="lede">Economy của IDEA quy tụ sản phẩm, dịch vụ và nguồn lực của toàn bộ thành viên liên minh — vận hành theo chuẩn chất lượng chung.</p>
+        <h1 class="display">Hệ sinh thái sản phẩm &amp; giải pháp</h1>
+        <p class="lede">Liên minh quy tụ giải pháp chuyển đổi số, an ninh mạng, AI và quản trị của các đơn vị thành viên — vận hành theo chuẩn chất lượng chung với kim chỉ nam Chắc chắn – Tin cậy – Hiệu quả – Giá thành phù hợp.</p>
       </div>
       <div class="img-r16"><img src="/assets/wide2.webp" alt="IDEA Economy" /></div>
     </div>
   </section>
 
   <section class="band white">
-    <div class="wrap"><PillarCards short /></div>
+    <div class="wrap">
+      <div class="band-head center">
+        <span class="eyebrow">Phòng chức năng thuê ngoài</span>
+        <h2 class="display-sm">Ba không gian dịch vụ</h2>
+      </div>
+      <PillarCards />
+    </div>
   </section>
 
   <section class="band">
-    <div class="wrap cols split-39">
-      <div>
-        <span class="eyebrow">Sản phẩm dịch vụ</span>
-        <h2 class="display-sm" style="font-size:clamp(26px,2.6vw,34px)">Lĩnh vực của thành viên</h2>
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Sản phẩm &amp; giải pháp của liên minh</span>
+        <h2 class="display-sm">12 nhóm giải pháp tiêu biểu</h2>
       </div>
-      <p class="lede" style="font-size:19px;line-height:1.8">{fields}</p>
+      <div class="grid-3">
+        {solutions.map(([t, d]) => (<div class="card"><h3>{t}</h3><p>{d}</p></div>))}
+      </div>
     </div>
   </section>
 
   <section class="band white">
     <div class="wrap">
-      <div class="band-head">
-        <span class="eyebrow">Dịch vụ của liên minh</span>
-        <h2 class="display-sm">14 nhóm giải pháp cho doanh nghiệp</h2>
+      <div class="band-head center">
+        <span class="eyebrow">Quy trình triển khai dự án (PPDIOO)</span>
+        <h2 class="display-sm">Chúng tôi làm việc thế nào</h2>
       </div>
-      <div class="grid-3">
-        {services.map(([t, d]) => (<div class="card"><h3>{t}</h3><p>{d}</p></div>))}
+      <div class="grid-4">
+        {process.map(([t, d], i) => (
+          <div class="card"><div class="num">{String(i + 1).padStart(2, '0')}</div><h3>{t}</h3><p>{d}</p></div>
+        ))}
       </div>
     </div>
   </section>
 
-  <CtaBand h="Cần giải pháp cho doanh nghiệp của bạn?" p="IDEA tư vấn miễn phí cho thành viên về lộ trình phù hợp nhất." />
+  <CtaBand h="Cần giải pháp cho tổ chức của bạn?" p="IDEA tư vấn lộ trình chuyển đổi số và kết nối đúng đơn vị thành viên có năng lực phù hợp nhất." />
 </Base>

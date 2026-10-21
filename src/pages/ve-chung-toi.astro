@@ -2,36 +2,73 @@
 import Base from '../layouts/Base.astro';
 import CtaBand from '../components/CtaBand.astro';
 import PillarCards from '../components/PillarCards.astro';
-const cultures = [
-  ['Tin tưởng', 'Minh bạch trong hợp tác, giữ chữ tín với thành viên, khách hàng và đối tác.'],
-  ['Trách nhiệm cao', 'Chủ động nhận việc, theo đến cùng và chịu trách nhiệm với kết quả.'],
-  ['Chuyên môn & cải tiến', 'Không ngừng học hỏi, nâng chuẩn chất lượng trong từng sản phẩm dịch vụ.'],
-  ['Đạo đức', 'Kinh doanh tử tế, đặt giá trị nhân văn của gia đình và cộng đồng làm gốc.'],
+const principles = [
+  'Gia tăng doanh thu',
+  'Tối ưu chi phí',
+  'Phát triển nguồn lực bền vững',
+  'Tận dụng và sử dụng hiệu quả các nguồn lực xã hội',
+  'Góp phần phục hồi văn hoá truyền thống Việt Nam và thế giới',
 ];
 ---
 <Base title="Về chúng tôi — IDEA" active="about">
   <section class="page-head">
     <div class="wrap cols split-57">
       <div>
-        <span class="eyebrow">Welcome to IDEA</span>
+        <span class="eyebrow">IETD · CSTID · IDEA</span>
         <h1 class="display">Hệ tư tưởng tiên phong về kinh doanh tạo tác động xã hội</h1>
-        <p class="lede">IDEA là liên minh tiên phong ứng dụng kinh doanh tạo tác động xã hội, khởi nghiệp, kết nối và tái cấu trúc doanh nghiệp bằng công nghệ tại Việt Nam.</p>
+        <p class="lede">IDEA là liên minh các thành viên có triết lý tư tưởng, nền tảng lý luận theo mục tiêu kinh doanh tác động xã hội — các tổ chức, doanh nghiệp, startup, dự án và cá nhân cam kết đồng hành cùng văn hoá của liên minh.</p>
       </div>
       <div class="img-r16"><img src="/assets/about1.webp" alt="IDEA" /></div>
     </div>
   </section>
 
   <section class="band white">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Tổng quan</span>
+        <h2 class="display-sm">Hành trình hình thành</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="num">2017</div>
+          <h3>Khởi nguồn từ IETD</h3>
+          <p>Viện Nghiên cứu Phát triển Kinh tế Thương mại (IETD), SSCorp, DVL Ventures cùng các doanh nghiệp trong hệ sinh thái và Liên minh Khởi sự kinh doanh thành lập, với nòng cốt là đội ngũ chuyên gia hàng đầu lĩnh vực CNTT thuộc Viện Tin học Nhân dân – Hội Tin học Việt Nam.</p></div>
+        <div class="card"><div class="num">CSTID</div>
+          <h3>Trung tâm điều hành</h3>
+          <p>Trung tâm KHCN Đổi mới sáng tạo &amp; Chuyển đổi số (CSTID) – IETD chủ trì thành lập liên minh, với mục tiêu trở thành liên minh kết nối nguồn lực quốc gia và quốc tế về nghiên cứu, tư vấn chính sách và triển khai giải pháp chuyển đổi số – đổi mới sáng tạo.</p></div>
+        <div class="card"><div class="num">IDEA</div>
+          <h3>Liên minh Kinh tế số &amp; ĐMST</h3>
+          <p>IDEA tiên phong trong hoạt động chuyển đổi số cho doanh nghiệp, cơ quan nhà nước tại các tỉnh thành, các tổ chức trong nước và FDI — liên tục chuyển giao giải pháp công nghệ mới tới các đối tác tin cậy.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
     <div class="wrap grid-2">
       <div class="card" style="padding:40px">
         <span class="eyebrow">Tầm nhìn</span>
-        <h2 class="title-serif" style="font-size:26px">Nền kinh tế chia sẻ của những doanh nhân tử tế</h2>
-        <p style="margin-top:14px">Xây dựng nền kinh tế chia sẻ cùng các doanh nhân đề cao đạo đức kinh doanh, hướng tới phục hồi những giá trị văn hoá tốt đẹp của gia đình và cộng đồng.</p>
+        <h2 class="title-serif" style="font-size:26px">Hệ tư tưởng tiên phong về kinh doanh tác động xã hội</h2>
+        <p style="margin-top:14px">Trở thành một hệ tư tưởng, triết lý và văn hoá tiên phong trong việc áp dụng các giải pháp kinh doanh tác động xã hội ở Việt Nam và cả thế giới — đồng hành cùng doanh nghiệp khởi sự kinh doanh, tái cấu trúc, chuyển đổi số &amp; đổi mới sáng tạo.</p>
       </div>
       <div class="card" style="padding:40px">
         <span class="eyebrow">Sứ mệnh</span>
-        <h2 class="title-serif" style="font-size:26px">Phát triển con người, đối tác và cộng đồng</h2>
-        <p style="margin-top:14px">Cam kết phát triển con người, đối tác và cộng đồng thông qua quản trị nguồn lực hiệu quả — cùng nhau tạo ra và chia sẻ giá trị bền vững.</p>
+        <h2 class="title-serif" style="font-size:26px">Thúc đẩy kinh tế chia sẻ bền vững</h2>
+        <p style="margin-top:14px">Thúc đẩy sự phát triển kinh tế chia sẻ và kinh doanh tác động xã hội một cách bền vững; tập trung phát triển đối tác kinh doanh và cộng đồng, tận dụng hiệu quả tối đa các nguồn lực xã hội, thúc đẩy tư duy cộng sinh, đồng sở hữu, cùng tạo giá trị cho cộng đồng.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap cols split-39">
+      <div>
+        <span class="eyebrow">Danh xưng</span>
+        <h2 class="display-sm" style="font-size:clamp(26px,2.6vw,34px)">Tên gọi chính thức</h2>
+      </div>
+      <div class="rows">
+        <div class="row-item"><div class="meta">Tên đầy đủ</div><div><h3>Liên minh Kinh tế số &amp; Đổi mới sáng tạo — Innovation &amp; Digital Economy Alliance (IDEA)</h3></div></div>
+        <div class="row-item"><div class="meta">Tên rút gọn</div><div><h3>Liên minh IDEA · IDE Alliance</h3></div></div>
+        <div class="row-item"><div class="meta">Tagline</div><div><h3>Làm việc tốt mỗi ngày</h3></div></div>
+        <div class="row-item"><div class="meta">Kim chỉ nam</div><div><h3>Chắc chắn – Tin cậy – Hiệu quả – Giá thành phù hợp</h3></div></div>
+        <div class="row-item"><div class="meta">CSTID</div><div><h3>Kết nối – Thích nghi – Phát triển (Connected – Adaptive – Intelligent)</h3></div></div>
       </div>
     </div>
   </section>
@@ -39,33 +76,33 @@ const cultures = [
   <section class="band">
     <div class="wrap">
       <div class="band-head center">
-        <span class="eyebrow">Hệ quản trị nguồn lực</span>
-        <h2 class="display-sm">Sơ đồ Hệ quản trị nguồn lực xã hội</h2>
-        <p class="lede measure auto" style="margin-top:18px">Giải pháp tổng thể của IDEA cho cá nhân, nhóm, tổ chức và doanh nghiệp — từ quản trị vận hành đến phát triển nguồn lực.</p>
+        <span class="eyebrow">Hệ quản trị nguồn lực CSTID &amp; IDEA</span>
+        <h2 class="display-sm">Sơ đồ vận hành nguồn lực</h2>
+        <p class="lede measure auto" style="margin-top:18px">Hội đồng liên minh (IDEA Board), Ban lãnh đạo (IDEA BOM) và trung tâm điều hành CSTID kết nối hội đồng khoa học – chuyên gia với nhà đầu tư, doanh nghiệp và cộng đồng.</p>
       </div>
-      <img class="r16" src="/assets/sodo.webp" alt="Sơ đồ hệ quản trị nguồn lực xã hội" loading="lazy" />
+      <img class="r16" src="/assets/sodo-idea.webp" alt="Sơ đồ kiến trúc CSTID & IDEA" loading="lazy" style="background:#fff;padding:12px" />
     </div>
   </section>
 
   <section class="band white">
     <div class="wrap">
       <div class="band-head center">
-        <span class="eyebrow">Giá trị cốt lõi</span>
-        <h2 class="display-sm">Ba trọng tâm hành động</h2>
+        <span class="eyebrow">Trí – Nhân – Tài – Vật</span>
+        <h2 class="display-sm">Hệ quản trị nguồn lực liên minh</h2>
       </div>
-      <PillarCards short />
+      <img class="r16" src="/assets/house.webp" alt="Hệ quản trị nguồn lực: liên kết nguồn lực và phát triển đối tác, khách hàng" loading="lazy" style="background:#fff;padding:12px" />
     </div>
   </section>
 
   <section class="band">
-    <div class="wrap">
-      <div class="band-head center">
-        <span class="eyebrow">Văn hoá liên minh</span>
-        <h2 class="display-sm">Cách chúng tôi làm việc cùng nhau</h2>
+    <div class="wrap cols split-39">
+      <div>
+        <span class="eyebrow">Tôn chỉ mục đích</span>
+        <h2 class="display-sm" style="font-size:clamp(26px,2.6vw,34px)">Năm tôn chỉ cốt lõi</h2>
       </div>
-      <div class="grid-4">
-        {cultures.map(([t, d], i) => (
-          <div class="card"><div class="num">{String(i + 1).padStart(2, '0')}</div><h3>{t}</h3><p>{d}</p></div>
+      <div class="rows">
+        {principles.map((p, i) => (
+          <div class="row-item"><div class="meta">{String(i + 1).padStart(2, '0')}</div><div><h3>{p}</h3></div></div>
         ))}
       </div>
     </div>
@@ -73,14 +110,13 @@ const cultures = [
 
   <section class="band white">
     <div class="wrap">
-      <div class="strip">
-        <img src="/assets/home1.webp" alt="" loading="lazy" />
-        <img src="/assets/partner1.webp" alt="" loading="lazy" />
-        <img src="/assets/partner2.webp" alt="" loading="lazy" />
-        <img src="/assets/wide2.webp" alt="" loading="lazy" />
+      <div class="band-head center">
+        <span class="eyebrow">Giá trị hành động</span>
+        <h2 class="display-sm">Ba không gian dịch vụ</h2>
       </div>
+      <PillarCards short />
     </div>
   </section>
 
-  <CtaBand h="Cùng IDEA kiến tạo giá trị chung" p="Trao đổi trực tiếp với liên minh về hành trình của bạn." />
+  <CtaBand h="Cùng IDEA kiến tạo giá trị chung" p="Trao đổi trực tiếp với liên minh về hành trình chuyển đổi số và đổi mới sáng tạo của bạn." />
 </Base>
