@@ -17,15 +17,26 @@ const cls = (k: string) => (k === active ? 'active' : undefined);
         <li><a href="/" class={cls('home')}>Trang chủ</a></li>
         <li><a href="/ve-chung-toi" class={cls('about')}>Về chúng tôi</a></li>
         <li class="dropdown">
-          <a href="/economy" class={cls('economy')}>Economy</a>
+          <a href="/economy" class={cls('services')}>Dịch vụ</a>
           <ul class="menu">
-            <li><a href="/economy">Tổng quan Economy</a></li>
-            <li><a href="/idea-growth">IDEA GROWTH — Gia tăng doanh thu</a></li>
-            <li><a href="/idea-hrds">IDEA HRDs — Tối ưu chi phí</a></li>
-            <li><a href="/idea-tech">IDEA TECH — Phát triển nguồn lực</a></li>
+            <li><a href="/idea-growth">IDEA Co-Growth Space — Marketing &amp; Sales</a></li>
+            <li><a href="/idea-tech">IDEA Co-Technology Space — Chuyển đổi số</a></li>
+            <li><a href="/quy-trinh">Quy trình triển khai</a></li>
           </ul>
         </li>
-        <li><a href="/co-van" class={cls('covan')}>Cố vấn</a></li>
+        <li class="dropdown">
+          <a href="/economy" class={cls('solutions')}>Giải pháp</a>
+          <ul class="menu">
+            <li><a href="/economy">Tổng quan sản phẩm &amp; giải pháp</a></li>
+            <li><a href="/giai-phap/an-ninh-mang">An ninh mạng — Cyber Security</a></li>
+            <li><a href="/giai-phap/ai-tu-dong-hoa">AI &amp; Tự động hoá</a></li>
+            <li><a href="/giai-phap/ban-do-so">Bản đồ số KCN &amp; Xúc tiến đầu tư</a></li>
+            <li><a href="/giai-phap/tai-san-so">Tài sản số &amp; Đấu giá</a></li>
+            <li><a href="/giai-phap/dien-nang-luong">Điện – Tự động hoá – Năng lượng</a></li>
+            <li><a href="/giai-phap/dong-y">Đông Y &amp; Dược liệu số</a></li>
+          </ul>
+        </li>
+        <li><a href="/co-van" class={cls('covan')}>Đội ngũ</a></li>
         <li><a href="/thanh-vien" class={cls('member')}>Thành viên</a></li>
         <li><a href="/tin-tuc" class={cls('news')}>Tin tức</a></li>
       </ul>

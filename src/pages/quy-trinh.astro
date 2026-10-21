@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+const ppdioo = [
+  ['Prepare', ['Research (R&D): thấu hiểu nhu cầu của đối tác/khách hàng để thống nhất yêu cầu đối với công nghệ.', 'Estimate: xây dựng đề xuất đề án/giải pháp công nghệ, lịch trình triển khai, chi phí.']],
+  ['Plan & Design', ['Kế hoạch triển khai: phân tích logic business, lập kế hoạch chi tiết và các mốc thời gian bàn giao.', 'Kiến trúc & thiết kế: xây dựng kiến trúc và thiết kế chức năng đề án, giải pháp, sản phẩm chi tiết.']],
+  ['Implementation', ['Connect: làm việc với đối tác, khách hàng và các thành viên liên quan trong liên minh.', 'Delivery & Maintenance: code, test, pilot, scale… dựa trên kiến trúc và thiết kế; support & maintenance.']],
+  ['Operation & Optimization', ['Operation: bàn giao, chuyển giao theo milestone; hợp tác đồng hành, đánh giá trong và sau vận hành.', 'Optimization: đánh giá, tối ưu phát triển và xuất khẩu mô hình (International).']],
+];
+const partner = [
+  ['Investigation', 'Tiếp nhận thông tin: thấu hiểu nhu cầu để thống nhất yêu cầu; Ước lượng: đề xuất công nghệ, lịch trình, chi phí — ký hợp đồng và tạm ứng.'],
+  ['Estimation', 'Kế hoạch triển khai: phân tích logic business, kế hoạch chi tiết, mốc bàn giao; kiến trúc & thiết kế chức năng sản phẩm.'],
+  ['Coding', 'Coding & Testing: lập trình và kiểm thử dựa trên kiến trúc và thiết kế sản phẩm.'],
+  ['Delivery & Maintenance', 'Bàn giao theo milestone, nghiệm thu và test người dùng, hoàn thiện xuất bản; đề xuất hợp đồng bảo trì đảm bảo vận hành sau bàn giao.'],
+];
+---
+<Base title="Quy trình — IDEA" active="services">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Cách chúng tôi làm việc</span>
+      <h1 class="display">Quy trình triển khai của liên minh</h1>
+      <p class="lede measure">Chuẩn hoá theo PPDIOO từ nghiên cứu nhu cầu đến vận hành – tối ưu, áp dụng thống nhất cho mọi dự án của các đơn vị thành viên.</p>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Quy trình triển khai dự án</span>
+        <h2 class="display-sm">PPDIOO — 4 giai đoạn, 8 bước</h2>
+      </div>
+      <div class="grid-4">
+        {ppdioo.map(([t, items], i) => (
+          <div class="card"><div class="num">{String(i + 1).padStart(2, '0')}</div><h3>{t}</h3>
+            {(items as string[]).map((it) => <p style="margin-bottom:8px">{it}</p>)}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Quy trình làm việc với đối tác / khách hàng</span>
+        <h2 class="display-sm">Bốn bước hợp tác rõ ràng</h2>
+      </div>
+      <div class="grid-4">
+        {partner.map(([t, d], i) => (
+          <div class="card"><div class="num">{String(i + 1).padStart(2, '0')}</div><h3>{t}</h3><p>{d}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head center">
+        <span class="eyebrow">Quy trình phát triển phần mềm</span>
+        <h2 class="display-sm">Từ yêu cầu đến xuất bản</h2>
+        <p class="lede measure auto" style="margin-top:16px">Quản lý triển khai sản xuất xuyên suốt: yêu cầu → thiết kế database/UI-UX/hệ thống → coding → triển khai → test → cài đặt &amp; xuất bản, song song R&amp;D và hỗ trợ khách hàng.</p>
+      </div>
+      <img class="r16" src="/assets/sl-sw-process.webp" alt="Sơ đồ quy trình phát triển phần mềm" loading="lazy" style="background:#fff;padding:12px" />
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head center">
+        <span class="eyebrow">CSTID &amp; IDEA Co-Economy Space</span>
+        <h2 class="display-sm">Cấu trúc team công nghệ</h2>
+        <p class="lede measure auto" style="margin-top:16px">Một team sản xuất phần mềm đầy đủ: PM, Business Analysis, Senior Tech Lead, Dev Web/App, FrontEnd, BackEnd, DevOps, Tester, Data Analysis và Security — tối ưu giờ công (manhour/manday/manmonth) cho từng công việc.</p>
+      </div>
+      <img class="r16" src="/assets/sl-tech-team.webp" alt="Cấu trúc công nghệ và tổ chức team" loading="lazy" style="background:#fff;padding:12px" />
+    </div>
+  </section>
+
+  <CtaBand h="Bắt đầu dự án cùng IDEA" p="Gửi yêu cầu — bước Research & Estimate hoàn toàn miễn phí." />
+</Base>

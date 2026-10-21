@@ -1,0 +1,64 @@
+---
+import Base from '../../layouts/Base.astro';
+import CtaBand from '../../components/CtaBand.astro';
+const bitcare = [
+  ['Anti-Ransomware — Phòng chống mã độc', ['Chống mã độc mã hoá dữ liệu: giám sát toàn bộ hành vi tấn công vào dữ liệu, chủ động ngăn chặn ransomware.', 'Nhận diện hành vi bất thường: phát hiện sớm hành vi lạ chưa từng xuất hiện, vượt trội so với phát hiện theo mẫu.', 'Ứng dụng AI tiên tiến: mô hình huấn luyện liên tục trên tập dữ liệu chuẩn ISO và kinh nghiệm chuyên gia.', 'Thành tích: AI phát hiện hành vi với tỷ lệ chính xác trên 98%.']],
+  ['DLP — Chống thất thoát dữ liệu', ['Chủ động mã hoá toàn bộ tài liệu trên máy tính theo thuật toán riêng.', 'Mã hoá riêng, mã hoá tức thì cho từng đơn vị, phòng ban.', 'Chống lấy cắp dữ liệu và thất thoát qua in ấn, tự động xoá bộ nhớ tạm trên thiết bị in.']],
+  ['EDR — Giám sát & phản ứng chủ động', ['Bảo vệ đa dạng mối đe doạ: phát hiện, loại bỏ, ngăn chặn virus, malware, ransomware, spyware, phishing.', 'Bảo vệ quyền riêng tư: chống truy cập trái phép webcam, micro; xoá file an toàn vĩnh viễn; kiểm soát truy cập.', 'Tối ưu hiệu suất hệ thống: dọn dẹp file rác, tăng tốc máy tính cho các endpoint.']],
+  ['Pentest & Tuning Performance', ['PenTest – Audit: kiểm thử xâm nhập mô phỏng tấn công, phương pháp OWASP, hacker mũ trắng.', 'Tuning Performance: tối ưu hệ thống tăng hiệu suất, giảm độ trễ, nâng tính ổn định ở quy mô lớn.', 'Kiến trúc dữ liệu cốt lõi & tối ưu tải trọng: xử lý hàng tỷ bản ghi với độ trễ thấp nhất, mở rộng không giới hạn.']],
+];
+---
+<Base title="An ninh mạng — IDEA" active="solutions">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Giải pháp cho doanh nghiệp · Bitcare &amp; PAMA</span>
+      <h1 class="display">Cyber Security — An ninh an toàn thông tin</h1>
+      <p class="lede measure">Bảo vệ dữ liệu, thông tin — an toàn và an ninh trên không gian mạng. Triển khai bởi Bitcare (bitcare.com.vn) và PAMA cùng IDEA Alliance.</p>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Bitcare — Your privacy, we secure</span>
+        <h2 class="display-sm">Bốn giải pháp bảo vệ doanh nghiệp</h2>
+      </div>
+      <div class="grid-2">
+        {bitcare.map(([t, items], i) => (
+          <div class="card" style="padding:34px">
+            <div class="num">{String(i + 1).padStart(2, '0')}</div>
+            <h3>{t}</h3>
+            {(items as string[]).map((it) => <p style="margin-bottom:9px">• {it}</p>)}
+          </div>
+        ))}
+      </div>
+      <p class="center" style="margin-top:28px"><a class="link" href="https://bitcare.com.vn" target="_blank" rel="noopener">Chi tiết tại bitcare.com.vn →</a></p>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Cyber Security PAMA &amp; IDEA Alliance</span>
+        <h2 class="display-sm">Pama XSC — giải pháp an ninh toàn diện</h2>
+      </div>
+      <div class="cols split-57" style="align-items:start">
+        <div>
+          <div class="rows">
+            <div class="row-item"><div class="meta">01</div><div><h3 style="font-size:18px">Giả lập, đào tạo</h3><p>Cyber Range, Cyber Arena — huấn luyện trên môi trường mô phỏng.</p></div></div>
+            <div class="row-item"><div class="meta">02</div><div><h3 style="font-size:18px">Điều tra (Investigate)</h3><p>Điều tra 24/7, cập nhật đa kênh, tự động phát hiện kiểu tấn công mới.</p></div></div>
+            <div class="row-item"><div class="meta">03</div><div><h3 style="font-size:18px">Bảo vệ (Protect)</h3><p>Chống cài đặt Trojan, tìm nơi ẩn náu và đưa phương án bảo vệ trước khi bị phá hoại.</p></div></div>
+            <div class="row-item"><div class="meta">04</div><div><h3 style="font-size:18px">Thẩm định chất lượng phần mềm</h3><p>Quality control; ảo hoá hạ tầng, thiết bị bẫy (honeypot) để truy vết hacker.</p></div></div>
+            <div class="row-item"><div class="meta">05</div><div><h3 style="font-size:18px">Triển khai linh hoạt</h3><p>Hai hình thức: Cloud và On-Premise; trung tâm thẩm định theo chuẩn an ninh.</p></div></div>
+          </div>
+        </div>
+        <div>
+          <img class="r16" src="/assets/sl-pama-xsc.webp" alt="Giải pháp, sản phẩm Pama XSC" loading="lazy" style="background:#fff;padding:10px;margin-bottom:18px" />
+          <img class="r16" src="/assets/sl-pama-roadmap.webp" alt="Lộ trình phát triển sản phẩm dịch vụ Pama" loading="lazy" style="background:#fff;padding:10px" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand h="Đánh giá an ninh hệ thống của bạn" p="Liên hệ để nhận tư vấn và kiểm thử xâm nhập từ đội ngũ chuyên gia an ninh mạng của liên minh." />
+</Base>

@@ -1,0 +1,74 @@
+---
+import Base from '../../layouts/Base.astro';
+import CtaBand from '../../components/CtaBand.astro';
+const regions = [
+  ['Vùng 1 — Trung du & miền núi phía Bắc', '38 khu công nghiệp'],
+  ['Vùng 2 — Đồng bằng sông Hồng', '96 khu công nghiệp'],
+  ['Vùng 3 — Bắc Trung Bộ & duyên hải miền Trung', '63 khu công nghiệp'],
+  ['Vùng 4 — Tây Nguyên', '7 khu công nghiệp'],
+  ['Vùng 5 — Đông Nam Bộ', '50 khu công nghiệp'],
+  ['Vùng 6 — Đồng bằng sông Cửu Long', '30 khu công nghiệp'],
+];
+---
+<Base title="Bản đồ số KCN — IDEA" active="solutions">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">VIPDS — Vietnam Industrial Park Development Solution</span>
+      <h1 class="display">Bản đồ số khu công nghiệp &amp; Cổng xúc tiến đầu tư</h1>
+      <p class="lede measure">Đề án xây dựng Bản đồ số khu công nghiệp và Cổng thông tin xúc tiến đầu tư khu vực phía Bắc — chủ trì bởi Trung tâm Xúc tiến, Thông tin và Hỗ trợ Đầu tư phía Bắc (NIPISC) – Cục Đầu tư nước ngoài, Bộ Kế hoạch và Đầu tư; đơn vị tư vấn và phát triển giải pháp: VIPDS.</p>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Mục tiêu đề án</span>
+        <h2 class="display-sm">Nền tảng số hiện đại, liên thông</h2>
+      </div>
+      <div class="grid-4">
+        <div class="card"><div class="num">01</div><h3>Nền tảng tích hợp</h3><p>Xây dựng nền tảng số hiện đại, liên thông, tích hợp thông tin và dữ liệu phục vụ xúc tiến đầu tư khu công nghiệp.</p></div>
+        <div class="card"><div class="num">02</div><h3>Thông tin quy hoạch</h3><p>Cung cấp thông tin quy hoạch, chủ đầu tư, dự án kêu gọi đầu tư — trực quan và luôn cập nhật.</p></div>
+        <div class="card"><div class="num">03</div><h3>Kênh kết nối</h3><p>Tạo kênh kết nối giữa nhà đầu tư – khu công nghiệp – chính quyền.</p></div>
+        <div class="card"><div class="num">04</div><h3>Hỗ trợ quản lý</h3><p>Hỗ trợ công tác quản lý nhà nước về khu công nghiệp và xúc tiến đầu tư.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head center">
+        <span class="eyebrow">Bản đồ số KKT / KCN</span>
+        <h2 class="display-sm">284 khu công nghiệp trên 6 vùng</h2>
+      </div>
+      <img class="r16" src="/assets/sl-map-kcn.webp" alt="Bản đồ số khu kinh tế / khu công nghiệp 6 vùng" loading="lazy" style="background:#fff;padding:10px" />
+      <div class="grid-3" style="margin-top:28px">
+        {regions.map(([t, d]) => (<div class="card"><h3 style="font-size:16.5px">{t}</h3><p>{d}</p></div>))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap cols split-57" style="align-items:start">
+      <div>
+        <span class="eyebrow">Digital Operating System</span>
+        <h2 class="display-sm" style="font-size:clamp(26px,3vw,38px)">Nền tảng số tích hợp dữ liệu, liên thông thông tin</h2>
+        <p class="lede" style="margin-top:18px">Nền tảng số giúp tích hợp, đồng bộ và liên thông dữ liệu tất cả phần mềm trên hệ thống; phân cấp, phân quyền cập nhật, sử dụng và quản trị thông tin qua thời gian phục vụ thống kê và ra quyết định.</p>
+        <p style="margin-top:14px">Tích hợp phương tiện có tính kết nối, tương tác, truyền thông giữa người dùng — quản trị tập trung, kết nối Nhà đầu tư – Doanh nghiệp – Chính quyền.</p>
+      </div>
+      <img class="r16" src="/assets/sl-dos.webp" alt="Giao diện nền tảng quản trị tập trung NIPISC" loading="lazy" style="background:#fff;padding:10px" />
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head center">
+        <span class="eyebrow">IDD Framework</span>
+        <h2 class="display-sm">Phục vụ đa phân khúc hạ tầng</h2>
+        <p class="lede measure auto" style="margin-top:16px">Từ khu đô thị, hạ tầng trọng yếu, smart city đến bệnh viện, sân bay, toà nhà thương mại — xây dựng cho chủ đầu tư, nhà thầu, tư vấn, quản lý vận hành và chính quyền.</p>
+      </div>
+      <img class="r16" src="/assets/sl-idd.webp" alt="IDD Framework — các phân khúc hỗ trợ" loading="lazy" style="background:#fff;padding:10px" />
+    </div>
+  </section>
+
+  <CtaBand h="Số hoá hạ tầng và xúc tiến đầu tư" p="Trao đổi với VIPDS và liên minh về bản đồ số, cổng thông tin cho tỉnh thành hoặc khu công nghiệp của bạn." />
+</Base>

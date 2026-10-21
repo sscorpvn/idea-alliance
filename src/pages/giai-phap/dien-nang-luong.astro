@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+import CtaBand from '../../components/CtaBand.astro';
+const lotec = [
+  ['Điện — Electrical Engineering', 'Máy biến áp, hệ thống tủ điện, nguồn DC và ắc quy, thiết bị phân phối. “Nền tảng vận hành ổn định.”'],
+  ['An ninh — Intelligent Security', 'Camera AI, camera nhiệt, giám sát hàng rào, cảnh báo xâm nhập. “Bảo vệ toàn diện công trình trọng yếu.”'],
+  ['Tự động hoá — Industrial Automation', 'PLC, SCADA, RTU, tủ điều khiển, tích hợp hệ thống, điều khiển công nghiệp. “Vận hành thông minh, hiệu quả vượt trội.”'],
+  ['Năng lượng — Smart Energy', 'Điện mặt trời, giám sát năng lượng, hệ thống lưu trữ, tối ưu hiệu suất. “Năng lượng sạch cho tương lai bền vững.”'],
+  ['Công nghệ số — Digital Technology', 'IoT và kết nối thiết bị, phần mềm quản lý, phân tích dữ liệu, chuyển đổi số hạ tầng. “Dữ liệu tạo giá trị, kết nối tương lai.”'],
+];
+const avatech = [
+  ['Giải pháp AI cho sản xuất', 'Máy kiểm tra trục tròn aVisShaft, kính aVisGlass, tem nhãn aVisBot, phân loại củ quả aVisSort; phần mềm Vision AI; ứng dụng AI phân tích dữ liệu sản xuất.'],
+  ['Tự động hoá cho doanh nghiệp', 'Thiết kế – triển khai hệ thống Automation, AI Workflow, AI Agents; ứng dụng AI tối ưu quy trình nội bộ.'],
+  ['Tư vấn nghiên cứu & phát triển sản phẩm', 'Chiến lược phát triển sản phẩm công nghệ cao Camera AI và Robot; xây dựng đội ngũ R&D.'],
+  ['Đào tạo & phát triển năng lực AI', 'Khoá học ứng dụng AI trong sản xuất, quản lý, vận hành; chương trình “AI thực chiến” theo nhu cầu doanh nghiệp.'],
+];
+---
+<Base title="Điện – Tự động hoá – Năng lượng — IDEA" active="solutions">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">LOTEC Việt Nam &amp; AVATECH (Advanced Vision Automation)</span>
+      <h1 class="display">Điện – Tự động hoá – Năng lượng</h1>
+      <p class="lede measure">Giải pháp công nghệ kỹ thuật toàn diện cho hạ tầng, sản xuất, năng lượng và công nghiệp.</p>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">LOTEC — Solutions for the future</span>
+        <h2 class="display-sm">5 trụ cột giải pháp LOTEC</h2>
+        <p class="lede measure" style="margin-top:16px">Năm lĩnh vực chiến lược được tích hợp và bổ trợ lẫn nhau, tạo nên hệ sinh thái hoàn chỉnh cho hạ tầng, năng lượng và công nghiệp.</p>
+      </div>
+      <img class="r16" src="/assets/sl-lotec.webp" alt="5 trụ cột giải pháp LOTEC" loading="lazy" style="background:#fff;padding:10px;margin-bottom:28px" />
+      <div class="grid-3">
+        {lotec.map(([t, d], i) => (
+          <div class="card"><div class="num">{String(i + 1).padStart(2, '0')}</div><h3 style="font-size:17px">{t}</h3><p>{d}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">AVATECH · spms2.com · từ 2018</span>
+        <h2 class="display-sm">Hệ sinh thái giải pháp cho doanh nghiệp sản xuất &amp; SMEs</h2>
+      </div>
+      <div class="cols split-57" style="align-items:start">
+        <div class="grid-2" style="gap:18px">
+          {avatech.map(([t, d]) => (<div class="card"><h3 style="font-size:17px">{t}</h3><p>{d}</p></div>))}
+        </div>
+        <img class="r16" src="/assets/sl-avatech.webp" alt="AVATECH — hệ sinh thái giải pháp toàn diện" loading="lazy" style="background:#fff;padding:10px" />
+      </div>
+    </div>
+  </section>
+
+  <CtaBand h="Hiện đại hoá hạ tầng và nhà máy của bạn" p="Từ tủ điện đến Vision AI — đội ngũ kỹ sư LOTEC và AVATECH khảo sát và đề xuất giải pháp phù hợp." />
+</Base>

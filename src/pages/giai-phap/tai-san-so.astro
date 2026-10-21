@@ -1,0 +1,100 @@
+---
+import Base from '../../layouts/Base.astro';
+import CtaBand from '../../components/CtaBand.astro';
+const stats = [
+  ['754.240+', 'Tài sản đấu giá'],
+  ['621.870+', 'Cuộc đấu giá'],
+  ['31.238.260+ tỷ', 'Tổng giá trị tài sản'],
+  ['480+', 'Công ty đấu giá tham gia'],
+];
+---
+<Base title="Tài sản số & Đấu giá — IDEA" active="solutions">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">SSCorp · spms2.com</span>
+      <h1 class="display">Hệ thống thông tin &amp; nền tảng số hoá Tài Sản Việt</h1>
+      <p class="lede measure">Dựa trên 4 trụ cột, lấy Data-First làm trung tâm — từ săn tài sản đấu giá toàn quốc đến số hoá 3D/VR và đấu giá trực tuyến.</p>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap cols split-57" style="align-items:start">
+      <div>
+        <span class="eyebrow">Hệ thống thông tin tài sản</span>
+        <h2 class="display-sm" style="font-size:clamp(26px,3vw,38px)">Săn tài sản đấu giá toàn quốc</h2>
+        <p class="lede" style="margin-top:18px">Săn đúng tài sản – trả đúng giá hợp lý – tối ưu lợi nhuận đầu tư. Hiểu thị trường đấu giá ở phân khúc bạn quan tâm trước khi đặt cọc.</p>
+        <div class="grid-2" style="margin-top:22px;gap:14px">
+          {stats.map(([n, d]) => (
+            <div class="card" style="padding:20px"><div class="num" style="font-size:24px;opacity:1;color:var(--green)">{n}</div><p>{d}</p></div>
+          ))}
+        </div>
+      </div>
+      <img class="r16" src="/assets/sl-dg-san.webp" alt="Giao diện săn tài sản đấu giá toàn quốc" loading="lazy" style="background:#fff;padding:10px" />
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap cols split-57" style="align-items:start">
+      <img class="r16" src="/assets/sl-dg-baocao.webp" alt="Báo cáo cơ hội đấu giá" loading="lazy" style="background:#fff;padding:10px" />
+      <div>
+        <span class="eyebrow">Báo cáo cơ hội đấu giá</span>
+        <h2 class="display-sm" style="font-size:clamp(26px,3vw,38px)">Hiểu thị trường trước khi đặt cọc</h2>
+        <p class="lede" style="margin-top:18px">Báo cáo phân tích đúng phân khúc bạn quan tâm: giá đang ở đâu, nguồn cung sôi động hay nguội, cơ hội ở đâu chưa ai để ý — phân bổ theo khu vực, khoảng giá, loại tài sản và pháp lý.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Số hoá &amp; đấu giá trực tuyến</span>
+        <h2 class="display-sm">Từ hồ sơ số đến phòng đấu giá online</h2>
+      </div>
+      <div class="grid-3">
+        <div>
+          <img class="r16" src="/assets/sl-dg-sohoa.webp" alt="Hệ thống số hoá tài sản 3D/VR360" loading="lazy" style="background:#fff;padding:8px" />
+          <h3 class="title-sans" style="margin-top:14px;font-size:18px">Số hoá tài sản 3D / VR 360°</h3>
+          <p style="font-size:14.5px">Xem model 3D, tham quan VR 360° — hồ sơ tài sản đầy đủ pháp lý, được sàn duyệt trước khi lên phiên.</p>
+        </div>
+        <div>
+          <img class="r16" src="/assets/sl-dg-tructuyen.webp" alt="Hệ thống đấu giá trực tuyến Tài sản Việt" loading="lazy" style="background:#fff;padding:8px" />
+          <h3 class="title-sans" style="margin-top:14px;font-size:18px">Đấu giá trực tuyến Tài Sản Việt</h3>
+          <p style="font-size:14.5px">Phòng đấu giá online theo phiên: đăng ký, nộp hồ sơ, xem tài sản và trả giá trực tuyến minh bạch.</p>
+        </div>
+        <div>
+          <img class="r16" src="/assets/sl-dg-langnghe.webp" alt="Bản đồ làng nghề số Việt Nam" loading="lazy" style="background:#fff;padding:8px" />
+          <h3 class="title-sans" style="margin-top:14px;font-size:18px">Bản đồ làng nghề số</h3>
+          <p style="font-size:14.5px">Khám phá làng nghề Việt Nam: hồ sơ số hoá từng làng nghề, sản phẩm và VR tour 360° trên bản đồ.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Hệ thống giải pháp quản lý doanh nghiệp — SMEs</span>
+        <h2 class="display-sm">Bộ công cụ trên nền tảng Google</h2>
+      </div>
+      <div class="grid-3">
+        <div>
+          <img class="r16" src="/assets/sl-sbiz.webp" alt="SBIZ Sales Management" loading="lazy" style="background:#fff;padding:8px;max-height:420px;object-fit:contain;margin:0 auto" />
+          <h3 class="title-sans" style="margin-top:14px;font-size:18px">SBIZ Sales Management</h3>
+          <p style="font-size:14.5px">Hệ thống chăm sóc khách hàng &amp; quản lý bán hàng trên mobile: doanh thu, đơn hàng, công nợ theo thời gian thực.</p>
+        </div>
+        <div>
+          <img class="r16" src="/assets/sl-spms-crm.webp" alt="Hệ thống SPMS CRM" loading="lazy" style="background:#fff;padding:8px" />
+          <h3 class="title-sans" style="margin-top:14px;font-size:18px">SPMS – CRM</h3>
+          <p style="font-size:14.5px">Quản lý bán hàng: khách hàng theo trạng thái, nguồn, nhân viên; báo cáo xu hướng và top sale.</p>
+        </div>
+        <div>
+          <img class="r16" src="/assets/sl-qlda.webp" alt="Hệ thống quản lý dự án" loading="lazy" style="background:#fff;padding:8px" />
+          <h3 class="title-sans" style="margin-top:14px;font-size:18px">Quản lý dự án</h3>
+          <p style="font-size:14.5px">Project Management: tiến độ nhiệm vụ, phân bổ ưu tiên, hiệu quả nhân viên và so sánh dự án.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand h="Khai thác dữ liệu tài sản cùng SSCorp" p="Từ báo cáo cơ hội đến số hoá và đấu giá trực tuyến — liên hệ để nhận demo hệ thống." />
+</Base>

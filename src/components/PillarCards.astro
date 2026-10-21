@@ -2,18 +2,15 @@
 interface Props { short?: boolean }
 const { short = false } = Astro.props;
 const pillars = [
-  { href: '/idea-growth', img: '/assets/growth.webp', name: 'IDEA Co-Growth Space',
-    long: 'Phòng Marketing & Sales đồng hành: tư vấn kế hoạch, thiết kế, nội dung, branding và marketing sau bán hàng.',
-    shortTxt: 'PR, Marketing & Sales — gia tăng doanh thu.' },
-  { href: '/idea-hrds', img: '/assets/hrd.webp', name: 'IDEA HRDs',
-    long: 'Phòng hành chính – nhân sự và tuyển dụng thuê ngoài, tinh gọn bộ máy vận hành cho doanh nghiệp.',
-    shortTxt: 'Tối ưu chi phí.' },
-  { href: '/idea-tech', img: '/assets/tech.webp', name: 'IDEA Co-Technology Space',
-    long: 'Dịch vụ công nghệ & chuyển đổi số: tư vấn, đào tạo, triển khai, thuê nhân sự lập trình, outsourcing và white label.',
-    shortTxt: 'Công nghệ & chuyển đổi số.' },
+  { href: '/idea-growth', img: '/assets/hs-cogrowth.webp', name: 'IDEA Co-Growth Space',
+    long: 'Dịch vụ Marketing & Sales đồng hành: tư vấn kế hoạch, thiết kế, nội dung, branding, product marketing và marketing sau bán hàng.',
+    shortTxt: 'PR, Marketing & Sales — gia tăng doanh thu, đồng hành tăng trưởng.' },
+  { href: '/idea-tech', img: '/assets/hs-cotech.webp', name: 'IDEA Co-Technology Space',
+    long: 'Dịch vụ công nghệ & chuyển đổi số: tư vấn, đào tạo, thiết kế triển khai, thuê nhân sự lập trình, outsourcing, white label và đồng hành dự án.',
+    shortTxt: 'Công nghệ & chuyển đổi số — phát triển nguồn lực bền vững.' },
 ];
 ---
-<div class="grid-3">
+<div class="grid-2" style="max-width:980px;margin:0 auto">
   {pillars.map(p => (
     <article class="pillar">
       <img src={p.img} alt={p.name} loading="lazy" />

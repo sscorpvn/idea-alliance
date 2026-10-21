@@ -3,18 +3,18 @@ import Base from '../layouts/Base.astro';
 import CtaBand from '../components/CtaBand.astro';
 import PillarCards from '../components/PillarCards.astro';
 const solutions = [
-  ['Cyber Security — Bitcare', 'An ninh an toàn thông tin: Anti-Ransomware, chống thất thoát dữ liệu (DLP), giám sát phản ứng chủ động (EDR), Pentest & Tuning Performance.'],
-  ['Pama XSC', 'Giải pháp an ninh mạng toàn diện: Cyber Range đào tạo, điều tra, bảo vệ và thẩm định chất lượng phần mềm — Cloud & On-Premise.'],
-  ['GRYPHON — BlueNet', 'Đưa AI từ công cụ cá nhân thành năng lực vận hành có kiểm soát, có lịch sử và mở rộng được trong tổ chức.'],
-  ['AI Workflow & Hora Kit — OpenReachTech', 'Nền tảng Chiho (LLM & RAG), CRM Leepai, AI báo giá EG và bộ khung phát triển AI Hora Kit (mã nguồn mở Apache 2.0).'],
-  ['Software Factory', 'Từ yêu cầu đến đặt phát triển trong một dịch vụ: AI tạo mock chạy được → đặc tả → Hora Kit triển khai, kiểm thử, xác minh bảo mật.'],
-  ['Bản đồ số KCN — VIPDS', 'Bản đồ số khu công nghiệp & cổng thông tin xúc tiến đầu tư khu vực phía Bắc (đề án cùng NIPISC – Bộ Kế hoạch và Đầu tư).'],
-  ['Tài sản đấu giá & Tài sản Việt — SSCorp', 'Hệ thống thông tin tài sản, số hoá tài sản (3D/VR360), đấu giá trực tuyến và bản đồ làng nghề số.'],
-  ['Quản lý doanh nghiệp SMEs', 'Bộ giải pháp trên nền tảng Google: SBIZ Sales Management, SPMS CRM, Quản lý dự án.'],
-  ['Điện – Tự động hoá – Năng lượng — LOTEC', '5 trụ cột: điện, an ninh thông minh, tự động hoá công nghiệp, năng lượng sạch và công nghệ số cho hạ tầng – sản xuất.'],
-  ['AI cho sản xuất — AVATECH', 'Máy kiểm tra Vision AI (aVisShaft, aVisGlass, aVisBot, aVisSort), tự động hoá doanh nghiệp, đào tạo "AI thực chiến".'],
-  ['Nhân lực Đông Y Việt Nam', 'Hạ tầng dữ liệu số và hệ sinh thái nhân lực ngành Y học cổ truyền: đào tạo chứng chỉ, kết nối thầy thuốc – phòng khám – doanh nghiệp.'],
-  ['Hệ sinh thái số hoá dược liệu', 'Cơ sở dữ liệu cây thuốc, cổng quản trị quốc gia, bản đồ GIS vùng trồng và truy xuất QR chuẩn GACP-WHO.'],
+  ['Cyber Security — Bitcare', '/giai-phap/an-ninh-mang', 'An ninh an toàn thông tin: Anti-Ransomware, chống thất thoát dữ liệu (DLP), giám sát phản ứng chủ động (EDR), Pentest & Tuning Performance.'],
+  ['Pama XSC', '/giai-phap/an-ninh-mang', 'Giải pháp an ninh mạng toàn diện: Cyber Range đào tạo, điều tra, bảo vệ và thẩm định chất lượng phần mềm — Cloud & On-Premise.'],
+  ['GRYPHON — BlueNet', '/giai-phap/ai-tu-dong-hoa', 'Đưa AI từ công cụ cá nhân thành năng lực vận hành có kiểm soát, có lịch sử và mở rộng được trong tổ chức.'],
+  ['AI Workflow & Hora Kit — OpenReachTech', '/giai-phap/ai-tu-dong-hoa', 'Nền tảng Chiho (LLM & RAG), CRM Leepai, AI báo giá EG và bộ khung phát triển AI Hora Kit (mã nguồn mở Apache 2.0).'],
+  ['Software Factory', '/giai-phap/ai-tu-dong-hoa', 'Từ yêu cầu đến đặt phát triển trong một dịch vụ: AI tạo mock chạy được → đặc tả → Hora Kit triển khai, kiểm thử, xác minh bảo mật.'],
+  ['Bản đồ số KCN — VIPDS', '/giai-phap/ban-do-so', 'Bản đồ số khu công nghiệp & cổng thông tin xúc tiến đầu tư khu vực phía Bắc (đề án cùng NIPISC – Bộ Kế hoạch và Đầu tư).'],
+  ['Tài sản đấu giá & Tài sản Việt — SSCorp', '/giai-phap/tai-san-so', 'Hệ thống thông tin tài sản, số hoá tài sản (3D/VR360), đấu giá trực tuyến và bản đồ làng nghề số.'],
+  ['Quản lý doanh nghiệp SMEs', '/giai-phap/tai-san-so', 'Bộ giải pháp trên nền tảng Google: SBIZ Sales Management, SPMS CRM, Quản lý dự án.'],
+  ['Điện – Tự động hoá – Năng lượng — LOTEC', '/giai-phap/dien-nang-luong', '5 trụ cột: điện, an ninh thông minh, tự động hoá công nghiệp, năng lượng sạch và công nghệ số cho hạ tầng – sản xuất.'],
+  ['AI cho sản xuất — AVATECH', '/giai-phap/dien-nang-luong', 'Máy kiểm tra Vision AI (aVisShaft, aVisGlass, aVisBot, aVisSort), tự động hoá doanh nghiệp, đào tạo "AI thực chiến".'],
+  ['Nhân lực Đông Y Việt Nam', '/giai-phap/dong-y', 'Hạ tầng dữ liệu số và hệ sinh thái nhân lực ngành Y học cổ truyền: đào tạo chứng chỉ, kết nối thầy thuốc – phòng khám – doanh nghiệp.'],
+  ['Hệ sinh thái số hoá dược liệu', '/giai-phap/dong-y', 'Cơ sở dữ liệu cây thuốc, cổng quản trị quốc gia, bản đồ GIS vùng trồng và truy xuất QR chuẩn GACP-WHO.'],
 ];
 const process = [
   ['Prepare', 'Research (R&D) thấu hiểu nhu cầu; Estimate đề xuất giải pháp, lịch trình và chi phí.'],
@@ -31,7 +31,7 @@ const process = [
         <h1 class="display">Hệ sinh thái sản phẩm &amp; giải pháp</h1>
         <p class="lede">Liên minh quy tụ giải pháp chuyển đổi số, an ninh mạng, AI và quản trị của các đơn vị thành viên — vận hành theo chuẩn chất lượng chung với kim chỉ nam Chắc chắn – Tin cậy – Hiệu quả – Giá thành phù hợp.</p>
       </div>
-      <div class="img-r16"><img src="/assets/wide2.webp" alt="IDEA Economy" /></div>
+      <div class="img-r16"><img src="/assets/sl-dg-san.webp" alt="Sản phẩm của liên minh" style="background:#fff;padding:10px;border-radius:16px" /></div>
     </div>
   </section>
 
@@ -39,7 +39,7 @@ const process = [
     <div class="wrap">
       <div class="band-head center">
         <span class="eyebrow">Phòng chức năng thuê ngoài</span>
-        <h2 class="display-sm">Ba không gian dịch vụ</h2>
+        <h2 class="display-sm">Hai không gian dịch vụ</h2>
       </div>
       <PillarCards />
     </div>
@@ -52,7 +52,7 @@ const process = [
         <h2 class="display-sm">12 nhóm giải pháp tiêu biểu</h2>
       </div>
       <div class="grid-3">
-        {solutions.map(([t, d]) => (<div class="card"><h3>{t}</h3><p>{d}</p></div>))}
+        {solutions.map(([t, u, d]) => (<div class="card"><h3>{t}</h3><p>{d}</p><a class="arrow" href={u}>Chi tiết</a></div>))}
       </div>
     </div>
   </section>

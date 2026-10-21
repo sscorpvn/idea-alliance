@@ -1,0 +1,94 @@
+---
+import Base from '../../layouts/Base.astro';
+import CtaBand from '../../components/CtaBand.astro';
+const hora = [
+  ['2 tuần', 'Hệ thống AI Workflow phức tạp cho doanh nghiệp vận hành website đấu giá tại Việt Nam'],
+  ['2 tuần', 'Bản sao hệ thống lõi đã chạy hơn 20 năm'],
+  ['3–4 ngày', 'Thay thế website WordPress (hàng chục nghìn dòng)'],
+  ['1 tuần', 'CRM phức tạp, từ yêu cầu đến phát hành'],
+  ['1 tuần', 'Hệ thống đào tạo nội bộ cho tập đoàn niêm yết lớn'],
+  ['1 ngày', 'Phát hiện 30+ lỗ hổng trong hệ thống hơn 1 triệu dòng code'],
+];
+---
+<Base title="AI & Tự động hoá — IDEA" active="solutions">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Giải pháp cho doanh nghiệp · BlueNet &amp; OpenReachTech</span>
+      <h1 class="display">AI &amp; Tự động hoá quy trình doanh nghiệp</h1>
+      <p class="lede measure">Đưa AI từ công cụ cá nhân thành năng lực vận hành có kiểm soát, có lịch sử và có thể mở rộng trong tổ chức.</p>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap cols split-57" style="align-items:start">
+      <div>
+        <span class="eyebrow">GRYPHON · BlueNet (bluenet.vn)</span>
+        <h2 class="display-sm" style="font-size:clamp(26px,3vw,38px)">Quản trị và vận hành quy trình AI</h2>
+        <p class="lede" style="margin-top:18px">Giao diện Gryphon cho người dùng, chuyên gia và quản lý: theo dõi công việc, rà soát, phê duyệt. Gryphon Kernel điều phối quy trình, quản trị, phiên bản, lịch sử và điều phối AI — kết nối mô hình AI, công cụ/API và dữ liệu đầu ra.</p>
+        <p style="margin-top:14px">Solution Pack: phát triển phần mềm · an toàn thông tin · nghiệp vụ…</p>
+      </div>
+      <div>
+        <img class="r16" src="/assets/sl-gryphon-flow.webp" alt="GRYPHON operational workflow" loading="lazy" style="background:#fff;padding:10px;margin-bottom:18px" />
+        <img class="r16" src="/assets/sl-gryphon-kernel.webp" alt="Kiến trúc Gryphon Kernel" loading="lazy" style="background:#fff;padding:10px" />
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">OpenReachTech (openreach.tech)</span>
+        <h2 class="display-sm">Tự động hoá bằng AI Workflow</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card"><h3>Nền tảng Chiho</h3><p>Nền tảng LLM &amp; RAG cho doanh nghiệp: tích hợp dữ liệu nội bộ, cung cấp AI chat, agent và workflow. Ra mắt 06/2024.</p></div>
+        <div class="card"><h3>Triển khai kiểu FDE</h3><p>Kỹ sư vào hiện trường: từ sắp xếp vấn đề, định nghĩa yêu cầu đến triển khai. Hỗ trợ dựng Local LLM (chọn GPU, hạ tầng on-premise). Báo giá theo từng dự án.</p></div>
+        <div class="card"><h3>Xây hệ thống riêng bằng Hora Kit</h3><p>Thay công việc làm bằng Excel/giấy bằng màn hình quản trị và workflow. Đã xây: ứng dụng OCR, RPA, CRM.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Bộ khung phát triển AI — Hora Kit</span>
+        <h2 class="display-sm">Kết quả thực tế khi áp dụng</h2>
+      </div>
+      <div class="grid-3">
+        {hora.map(([n, d]) => (
+          <div class="card"><div class="num" style="font-size:34px;opacity:1;color:var(--green)">{n}</div><p style="margin-top:10px;color:var(--ink)">{d}</p></div>
+        ))}
+      </div>
+      <div class="card" style="margin-top:24px">
+        <h3>Mã nguồn mở — Apache 2.0 (từ 09/2026)</h3>
+        <p>Bộ khung phát triển AI tự xây dựng, đúc kết 5 năm know-how, hơn 200 prompt &amp; workflow. Mọi tính năng đều qua kiểm thử và xác minh bảo mật. <a class="link" href="https://github.com/openreachtech/hora-boilerplate" target="_blank" rel="noopener">github.com/openreachtech/hora-boilerplate</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap cols split-57" style="align-items:start">
+      <div>
+        <span class="eyebrow">Sản phẩm &amp; nền tảng tự phát triển</span>
+        <h2 class="display-sm" style="font-size:clamp(26px,3vw,38px)">Hệ sản phẩm AI của ORT</h2>
+        <div class="rows" style="margin-top:24px">
+          <div class="row-item"><div class="meta">AI</div><div><h3 style="font-size:18px">Chiho (06/2024)</h3><p>Nền tảng LLM &amp; RAG cho doanh nghiệp — AI chat, agent và workflow.</p></div></div>
+          <div class="row-item"><div class="meta">CRM</div><div><h3 style="font-size:18px">Leepai (01/2025)</h3><p>CRM chức năng cao, tuỳ biến theo nghiệp vụ — tương đương Salesforce với chi phí thấp hơn.</p></div></div>
+          <div class="row-item"><div class="meta">AI</div><div><h3 style="font-size:18px">EG (Easy) — AI báo giá</h3><p>Trợ lý AI hỗ trợ lập báo giá cho phát triển phần mềm.</p></div></div>
+          <div class="row-item"><div class="meta">Mới 10/2026</div><div><h3 style="font-size:18px">Software Factory</h3><p>Từ yêu cầu đến đặt phát triển trong một dịch vụ: AI tạo mock chạy được → chuyển thành đặc tả → Hora Kit triển khai, kiểm thử, xác minh bảo mật.</p></div></div>
+          <div class="row-item"><div class="meta">Framework</div><div><h3 style="font-size:18px">renchan · furo · TokenSender</h3><p>Framework backend (12/2021), frontend (08/2024) và công cụ gửi token số lượng lớn (Web3).</p></div></div>
+        </div>
+      </div>
+      <div>
+        <img class="r16" src="/assets/sl-sf.webp" alt="Nền tảng công nghệ tự xây dựng của OpenReachTech" loading="lazy" style="background:#fff;padding:10px" />
+        <div class="grid-3" style="margin-top:18px;gap:14px">
+          <div class="card center" style="padding:20px"><div class="num" style="font-size:30px;opacity:1;color:var(--green)">30+</div><p>Dự án đang vận hành</p></div>
+          <div class="card center" style="padding:20px"><div class="num" style="font-size:30px;opacity:1;color:var(--green)">300+</div><p>Repository quản lý</p></div>
+          <div class="card center" style="padding:20px"><div class="num" style="font-size:30px;opacity:1;color:var(--green)">400+</div><p>Commit mỗi ngày</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand h="Tự động hoá quy trình của bạn bằng AI" p="Từ tư vấn đến triển khai on-premise — đội ngũ kỹ sư của liên minh đồng hành trọn vòng đời." />
+</Base>

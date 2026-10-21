@@ -1,0 +1,99 @@
+---
+import Base from '../../layouts/Base.astro';
+import CtaBand from '../../components/CtaBand.astro';
+const services = [
+  ['Đào tạo và cấp chứng chỉ', 'Chuẩn hoá chuyên môn và cấp chứng chỉ nghề nghiệp: trị liệu Đông y, chăm sóc dưỡng sinh, xương khớp.'],
+  ['Dịch vụ từ nền tảng kết nối', 'Hạ tầng dữ liệu số kết nối trực tiếp Thầy thuốc – Bác sĩ – Chuyên gia – Phòng khám – Bệnh nhân và Doanh nghiệp.'],
+  ['Cung ứng chuyên gia ngành Đông Y Dược', 'Nguồn nhân lực chất lượng cao, từ kỹ thuật viên trị liệu đến chuyên gia đầu ngành cho hệ thống y tế và chăm sóc sức khoẻ.'],
+  ['Tư vấn & thẩm định sản phẩm', 'Bảo chứng chất lượng qua dịch vụ thẩm định bài thuốc, tư vấn công bố sản phẩm và hội đồng khoa học chuyên sâu.'],
+  ['Trị liệu liên kết', 'Hợp tác vận hành, tối ưu công suất và chia sẻ doanh thu cùng mạng lưới phòng khám, cơ sở dưỡng sinh toàn quốc.'],
+];
+const digital = [
+  ['Cơ sở dữ liệu tập trung', 'Số hoá 100% tài nguyên cây thuốc của tỉnh: định danh khoa học, đặc điểm nông học, phân bố địa lý, dược lý hoá học và tri thức bản địa.'],
+  ['Cổng quản trị quốc gia', 'Giám sát trung tâm thời gian thực cho Sở Y tế, Sở KH-CN, Nông nghiệp: quy mô, diện tích trồng và chất lượng dược liệu toàn tỉnh.'],
+  ['Bảo tồn nguồn gen quý', 'Bản đồ số định vị phân bố các loài quý hiếm cần ưu tiên bảo tồn, ngăn nguy cơ tận diệt cây thuốc quý địa phương.'],
+];
+---
+<Base title="Đông Y & Dược liệu số — IDEA" active="solutions">
+  <section class="page-head">
+    <div class="wrap cols split-57">
+      <div>
+        <span class="eyebrow">Dự án · Việt Nam Dược Đạo</span>
+        <h1 class="display">Nhân lực Đông Y Việt Nam</h1>
+        <p class="lede">Kết hợp tinh hoa truyền thống và hiện đại — đơn vị tiên phong kiến tạo "hạ tầng dữ liệu số" và hệ sinh thái nhân lực toàn diện cho ngành Y học cổ truyền tại Việt Nam.</p>
+      </div>
+      <div class="img-r16"><img src="/assets/sl-dongy-chip.webp" alt="Hệ sinh thái Đông Y Dược số" /></div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap grid-2">
+      <div class="card" style="padding:40px">
+        <span class="eyebrow">Tầm nhìn</span>
+        <h2 class="title-serif" style="font-size:24px">Đơn vị số 1 Việt Nam về chuẩn hoá nhân sự Đông Y Dược</h2>
+        <p style="margin-top:14px">Cung cấp hạ tầng dữ liệu số cho ngành Đông Y Dược, hướng tới mạng lưới liên kết hàng vạn chuyên gia và cơ sở y tế trên toàn quốc.</p>
+      </div>
+      <div class="card" style="padding:40px">
+        <span class="eyebrow">Sứ mệnh</span>
+        <h2 class="title-serif" style="font-size:24px">Nâng tầm di sản Y học cổ truyền Việt Nam</h2>
+        <p style="margin-top:14px">Giải quyết triệt để bài toán thiếu hụt nhân sự chất lượng cao, minh bạch hoá năng lực chuyên môn và tối ưu chuỗi cung ứng dịch vụ chăm sóc sức khoẻ.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Hệ sinh thái chiến lược</span>
+        <h2 class="display-sm">Năm nhóm dịch vụ</h2>
+      </div>
+      <div class="grid-3">
+        {services.map(([t, d], i) => (
+          <div class="card"><div class="num">{String(i + 1).padStart(2, '0')}</div><h3 style="font-size:17px">{t}</h3><p>{d}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap cols split-57" style="align-items:start">
+      <div>
+        <span class="eyebrow">Mô hình đối tác chiến lược toàn diện</span>
+        <h2 class="display-sm" style="font-size:clamp(26px,3vw,38px)">Mạng lưới giá trị khép kín</h2>
+        <p class="lede" style="margin-top:18px">Tích hợp Y học hiện đại, Y học cổ truyền và hệ sinh thái sức khoẻ số — mở rộng đào tạo, chuyên gia đầu ngành và vùng trồng dược liệu.</p>
+        <p style="margin-top:12px">Nền tảng liên kết đối tác: cơ sở y tế &amp; đào tạo · cung ứng dược &amp; sản xuất · liên kết vùng trồng dược liệu (GACP) · hệ sinh thái lối sống &amp; sức khoẻ · đối tác công nghệ &amp; thanh toán · doanh nghiệp B2B.</p>
+      </div>
+      <img class="r16" src="/assets/sl-dongy-model.webp" alt="Mô hình đối tác chiến lược toàn diện" loading="lazy" style="background:#fff;padding:10px" />
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head">
+        <span class="eyebrow">Y Dược Việt Nam · Năng lực số</span>
+        <h2 class="display-sm">Hệ sinh thái số hoá dược liệu toàn diện</h2>
+      </div>
+      <div class="grid-3">
+        {digital.map(([t, d]) => (<div class="card"><h3 style="font-size:17px">{t}</h3><p>{d}</p></div>))}
+      </div>
+      <div class="card" style="margin-top:24px"><p style="color:var(--ink)">Giải pháp đáp ứng định hướng "Chương trình Phát triển Công nghiệp Dược" và chuyển đổi số trong Y tế &amp; Nông nghiệp của Chính phủ.</p></div>
+    </div>
+  </section>
+
+  <section class="band white">
+    <div class="wrap cols split-57" style="align-items:start">
+      <div>
+        <span class="eyebrow">Bản đồ số GIS &amp; định danh chuỗi giá trị</span>
+        <h2 class="display-sm" style="font-size:clamp(26px,3vw,38px)">Truy xuất chuẩn GACP-WHO</h2>
+        <div class="rows" style="margin-top:22px">
+          <div class="row-item"><div class="meta">01</div><div><h3 style="font-size:17px">Quy hoạch &amp; bản đồ toạ độ GIS vùng trồng</h3><p>Định vị kinh độ, vĩ độ thực tế; bản đồ số trực quan thể hiện phân bố, mật độ và ranh giới quy hoạch.</p></div></div>
+          <div class="row-item"><div class="meta">02</div><div><h3 style="font-size:17px">Định danh điện tử &amp; nhật ký canh tác số</h3><p>QR-Code duy nhất cho từng vùng trồng/lô sản phẩm theo chuẩn GS1 — quét mã để truy xuất hồ sơ canh tác GACP-WHO.</p></div></div>
+          <div class="row-item"><div class="meta">03</div><div><h3 style="font-size:17px">Quản lý diện tích &amp; biến động trữ lượng</h3><p>Tự động cập nhật diện tích thu hoạch, cảnh báo sớm biến động trữ lượng phục vụ hoạch định kinh tế nông thôn.</p></div></div>
+        </div>
+      </div>
+      <img class="r16" src="/assets/sl-dongy-gis.webp" alt="Hệ thống GIS dược liệu quốc gia" loading="lazy" style="background:#fff;padding:10px" />
+    </div>
+  </section>
+
+  <CtaBand h="Đồng hành cùng Việt Nam Dược Đạo" p="Kết nối với liên minh để tham gia mạng lưới đào tạo, vùng trồng và hệ sinh thái Đông Y Dược số." />
+</Base>
