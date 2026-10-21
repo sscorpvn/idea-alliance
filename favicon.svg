@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="IDEA — Liên minh Kinh tế số và Đổi mới sáng tạo">
-  <!-- vòng liên minh: cung đỏ (trên trái) + cung xanh (dưới phải) -->
-  <path d="M52.6 22.1 A30 30 0 0 0 21 59.8" fill="none" stroke="#E71C21" stroke-width="11" stroke-linecap="round"/>
-  <path d="M25.4 69.2 A30 30 0 0 0 79 44.2" fill="none" stroke="#6DBE45" stroke-width="11" stroke-linecap="round"/>
-  <!-- mũi tên tăng trưởng phóng từ tâm ra ngoài qua khe trên phải -->
-  <line x1="46" y1="56" x2="68.5" y2="33.5" stroke="#6DBE45" stroke-width="11" stroke-linecap="round"/>
-  <polygon points="80,22 77.2,37.6 64.4,24.8" fill="#6DBE45"/>
-</svg>
