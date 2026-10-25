@@ -36,6 +36,7 @@ const d = (post.date as string).slice(0, 10).split('-');
   </section>
   <section class="band white" style="padding-top:64px">
     <div class="wrap">
+      {post.img && <div class="article" style="margin-bottom:40px"><img class="r16" src={post.img} alt={post.img_alt || title} /></div>}
       <div class="article article-body" set:html={html} />
       <div class="article" style="margin-top:48px">
         <a class="arrow" href="/tin-tuc">Tất cả bài viết</a>

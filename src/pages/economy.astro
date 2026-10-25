@@ -5,6 +5,7 @@ import PillarCards from '../components/PillarCards.astro';
 const solutions = [
   ['Cyber Security — Bitcare', '/giai-phap/an-ninh-mang', 'An ninh an toàn thông tin: Anti-Ransomware, chống thất thoát dữ liệu (DLP), giám sát phản ứng chủ động (EDR), Pentest & Tuning Performance.'],
   ['Pama XSC', '/giai-phap/an-ninh-mang', 'Giải pháp an ninh mạng toàn diện: Cyber Range đào tạo, điều tra, bảo vệ và thẩm định chất lượng phần mềm — Cloud & On-Premise.'],
+  ['SmartEdu360 — Phòng học thông minh', '/giai-phap/smartedu360', 'Nền tảng phòng học thông minh của Bitcare: dạy nhiều lớp cùng lúc, bảng giảng điện tử, kết nối LMS, trợ lý AI lớp học.'],
   ['GRYPHON — BlueNet', '/giai-phap/ai-tu-dong-hoa', 'Đưa AI từ công cụ cá nhân thành năng lực vận hành có kiểm soát, có lịch sử và mở rộng được trong tổ chức.'],
   ['AI Workflow & Hora Kit — OpenReachTech', '/giai-phap/ai-tu-dong-hoa', 'Nền tảng Chiho (LLM & RAG), CRM Leepai, AI báo giá EG và bộ khung phát triển AI Hora Kit (mã nguồn mở Apache 2.0).'],
   ['Software Factory', '/giai-phap/ai-tu-dong-hoa', 'Từ yêu cầu đến đặt phát triển trong một dịch vụ: AI tạo mock chạy được → đặc tả → Hora Kit triển khai, kiểm thử, xác minh bảo mật.'],
@@ -49,7 +50,7 @@ const process = [
     <div class="wrap">
       <div class="band-head">
         <span class="eyebrow">Sản phẩm &amp; giải pháp của liên minh</span>
-        <h2 class="display-sm">12 nhóm giải pháp tiêu biểu</h2>
+        <h2 class="display-sm">13 nhóm giải pháp tiêu biểu</h2>
       </div>
       <div class="grid-3">
         {solutions.map(([t, u, d]) => (<div class="card"><h3>{t}</h3><p>{d}</p><a class="arrow" href={u}>Chi tiết</a></div>))}

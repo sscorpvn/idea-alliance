@@ -1,5 +1,17 @@
 [
  {
+  "slug": "bitcare-data-secure-gianh-giai-dlp-sang-tao-nhat-2026",
+  "date": "2026-10-25T09:00:00",
+  "title": "Bitcare Data Secure giành giải \"Nền tảng DLP sáng tạo nhất\" tại Cybersecurity Stars Awards 2026",
+  "excerpt": "Giải pháp chống thất thoát dữ liệu của Bitcare — thành viên Liên minh IDEA — được The Hacker News vinh danh ở hạng mục Most Innovative Data Leakage Prevention (DLP) Platform.",
+  "content": "\n<p><strong>Bitcare Data Secure</strong> — giải pháp chống thất thoát dữ liệu (DLP) do Công ty Cổ phần Bitcare, thành viên Liên minh IDEA, nghiên cứu và phát triển — vừa được vinh danh ở hạng mục <strong>Most Innovative Data Leakage Prevention (DLP) Platform</strong> (Nền tảng chống thất thoát dữ liệu sáng tạo nhất) tại <strong>Cybersecurity Stars Awards 2026</strong>, giải thưởng an ninh mạng quốc tế do The Hacker News tổ chức.</p>\n\n<p>Đây là sự ghi nhận quốc tế hiếm có dành cho một doanh nghiệp an toàn thông tin Việt Nam: Bitcare quy tụ đội ngũ chuyên gia giàu kinh nghiệm, nắm giữ nhiều chứng chỉ bảo mật quốc tế, với tầm nhìn trở thành công ty dẫn đầu khu vực về nghiên cứu và phát triển sản phẩm, dịch vụ an toàn thông tin.</p>\n\n<h2>Khác biệt cốt lõi: bảo vệ dữ liệu tại nguồn</h2>\n<p>Khác với các giải pháp DLP truyền thống — vốn tập trung giám sát nội dung và kiểm soát các kênh truyền như email, upload web, thiết bị lưu trữ di động hay lưu lượng mạng — Bitcare Data Secure đi theo mô hình <strong>zero-trust lấy dữ liệu làm trung tâm</strong>: lớp bảo vệ được \"gắn\" trực tiếp vào từng tập tin. Nhờ vậy, dữ liệu vẫn được bảo vệ và có thể bị thu hồi quyền truy cập <em>ngay cả khi file đã rời khỏi hệ thống của tổ chức</em>.</p>\n\n<h2>Năng lực nổi bật được hội đồng đánh giá</h2>\n<ul>\n<li>Mã hoá bền vững ở cấp độ tập tin ngay từ thời điểm file được tạo ra (chuẩn AES-256).</li>\n<li>Mỗi tập tin một khoá mã hoá riêng — giảm thiểu thiệt hại khi khoá bị lộ; phân phối khoá theo phiên an toàn với kiến trúc quản lý khoá tập trung.</li>\n<li>Thực thi chính sách tập trung: kiểm soát xem, sao chép, in ấn, chụp màn hình và chia sẻ tập tin.</li>\n<li>Bảo vệ liên tục cho dữ liệu khi lưu trữ, khi truyền và khi sử dụng.</li>\n<li>Vận hành \"trong suốt\" với người dùng cuối — không cần thao tác mã hoá thủ công hay đào tạo phức tạp.</li>\n<li>Tích hợp sẵn với môi trường doanh nghiệp Windows (triển khai từ xa qua AD/SCCM) và quy trình vận hành hiện có.</li>\n<li>Chống rủi ro từ nội bộ, lộ lọt trái phép, chiếm đoạt tài khoản và tấn công leo thang.</li>\n<li>Đã triển khai thực tế trong các môi trường vận hành bảo mật cao, cùng đội ngũ kỹ sư Việt Nam hỗ trợ 24/7.</li>\n</ul>\n\n<p>Giải thưởng là minh chứng cho định hướng của Liên minh IDEA: đưa sản phẩm công nghệ do thành viên Việt Nam làm chủ vươn ra tiêu chuẩn quốc tế. Xem công bố chính thức tại <a href=\"https://awards.thehackernews.com/winners/2026/bitcare-data-secure-dlp/\" target=\"_blank\" rel=\"noopener\">awards.thehackernews.com</a> và thông tin sản phẩm tại <a href=\"https://bitcare.com.vn\" target=\"_blank\" rel=\"noopener\">bitcare.com.vn</a>.</p>\n",
+  "cats": [
+   1
+  ],
+  "img": "/assets/news-bitcare-award.webp",
+  "img_alt": "The Hacker News vinh danh Bitcare Data Secure — Cybersecurity Stars Awards 2026"
+ },
+ {
   "slug": "phat-trien-phan-mem-voi-chatgpt-va-parasoft",
   "date": "2023-08-29T19:15:41",
   "title": "Phát triển phần mềm với ChatGPT và Parasoft: Ưu, Nhược điểm và Giải pháp",
